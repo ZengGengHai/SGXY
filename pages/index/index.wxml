@@ -1,0 +1,78 @@
+
+
+<image src="../../images/icon/feiji.png" mode='widthFix' class='feiji' ></image>
+
+<image src="../../images/icon/qiqiu.png" mode='widthFix' class='qiqiu' ></image>
+
+<image src="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hT6bGMNYcAKEy7q.png" mode='widthFix' class='png' style="position:fixed;top:0;left:0;width:100vw;" ></image>
+
+  <scroll-view scroll-y class="scrollPage">
+  
+    <view class="cu-card">
+    <view class="cu-item bg-img shadow-blur" style="background-image:url({{item.img}});z-index:99;" bindtap="toChild" data-url="{{item.url}}" wx:for="{{list}}" wx:key>
+      <view class='wbg'></view>
+      <view class="cardTitle" style='color:#FFF;'>
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+  <view class='cu-tabbar-height'></view>
+</scroll-view>
+<image style='width:100vw;height:20vh;min-height:20vh;position:fixed;bottom:0;left:0;z-index:0;' src="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hT5CsLzDKBbWpQb.png" mode="aspectFill">
+</image>
+<!-- 
+<image class="image" mode="aspectFill">
+<image style='width:100vw;position:fixed;top:0;left:0;' src="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hRxxaYRpagdFccM.png" mode="aspectFill">
+</image>
+
+<image style='width:100vw;position:fixed;top:0;left:0;' src="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hRxxaYRpagdFccM.png" mode="aspectFill">
+</image>
+  <view class='lantern_left' style='z-index:9999;padding-bottom:40rpx;'  bindtap='head_portrait'><image class='lantern' src='../../images/lantern_left.gif'></image></view>
+  <view class='lantern_right'  style='z-index:9999;padding-bottom:40rpx;' bindtap='History' ><image class='lantern' src='../../images/lantern_left.gif'></image></view>
+
+
+
+  <view class='Style_list'>
+    <view class='list' bindtap='School_Introduction'>
+      <image class='list_image' src='../../images/aa.jpg' mode='aspectFill'  ></image>
+      <view class='list_text'>
+        <view class=' item_en_name'>School introduction</view>
+        <view class=' item_ch_name'>韶院简介</view>
+        <view class=' item_next'><image class=' next_image' src='../../images/icon/left.png'></image></view>
+      </view>
+    </view>
+     <view class='list'  bindtap='map' >
+      <image class='list_image' src='../../images/cc.jpg' mode='aspectFill' ></image>
+      <view class='list_text'>
+        <view class=' item_en_name'>School Guide</view>
+        <view class=' item_ch_name'>逛逛韶院</view>
+        <view class=' item_next'><image class=' next_image' src='../../images/icon/left.png'></image></view>
+      </view>
+    </view>
+     <view class='list'  bindtap='All_function'>
+      <image class='list_image' src='../../images/bb.jpg' mode='aspectFill' ></image>
+      <view class='list_text'>
+        <view class=' item_en_name'>More Function</view>
+        <view class=' item_ch_name'>更多功能</view>
+        <view class=' item_next'><image class=' next_image' src='../../images/icon/left.png'></image></view>
+      </view>
+    </view>
+     <view class='list' bindtap='Personal'>
+      <image class='list_image' src='../../images/dd.jpg' mode='aspectFill' ></image>
+      <view class='list_text'>
+        <view class=' item_en_name'>Personal</view>
+        <view class=' item_ch_name'>个人中心</view>
+        <view class=' item_next'><image class=' next_image' src='../../images/icon/left.png'></image></view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class='school_logo' ><image class='school_logo_image' src='../../images/icon/school_logo.png'></image></view>
+  <view class='bottom_logo'><image class='bottom_logo_image' src='../../images/icon/bottom.png'></image></view>
+</image>
+
+
+
+<image style='width:100vw;position:fixed;bottom:0;left:0;' src="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hRxoSXR67FrBYNM.png" mode="aspectFill">
+</image> -->

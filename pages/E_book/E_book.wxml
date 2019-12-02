@@ -1,0 +1,12 @@
+<!--pages/E_book/E_book.wxml-->
+<view style='background:#eee;height:100vh;'>
+    <image class='img'  mode='aspectFill' src="{{cover_img}}"></image>
+    <view class='book_title'>{{book_title}}</view>
+    <view class='chapter' >
+     <block wx:for="{{chapter}}">
+      <view>{{item}}</view>
+     </block>
+    </view>
+    <button class='btn' bindtap='DownLoad'>保存图片扫码观看
+    </button>
+</view>

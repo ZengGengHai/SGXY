@@ -1,0 +1,28 @@
+  
+  
+<cuzc-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hGkWcWtytOeO9fl.jpg" isBack="{{true}}">
+  
+</cuzc-custom>
+
+  <view class='song_list ' >
+    <block wx:for-items="{{song_List}}" wx:key="{{item.id}}">
+      <view class='song  bg-white radius shadow-warp '>
+        <view class='kind-list-item'>
+         <view bindtap="see"   data-id="{{item.song_id}}" class='song_title_box' > 
+          <view class='time'  >{{item.song_time}}</view>
+          <image class="r_b_image {{item.open ? 'r_b_image_show' : ''}} " src='../../images/icon/right.png' ></image>        
+         </view>
+          
+          <view class="song_name_list {{item.open ? 'song_name_list-show' : ''}}" >
+            <block wx:for-items="{{item.song_name}}" wx:key="{{item.index}}">
+              <view class='song_name'>{{item}}</view>
+            </block>
+          </view>
+        </view> 
+      </view>
+    </block>
+  </view>
+
+  
+ 
+   <view class='loding' bindtap="{{!Load_complete?'user_content':''}}">{{Tips}}</view>

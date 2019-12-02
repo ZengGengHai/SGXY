@@ -1,0 +1,9 @@
+<template name='school-association'>
+  <!-- <view class='association'>-------努力开发中-------</view> -->
+  <view class='container'>
+  <view class='pic pic-{{index}}' wx:for="{{list}}" style="height:{{item.height}}px;left:{{item.left}}; top:{{item.top}}; position:{{item.position}}" wx:key="{{item.index}}">
+    <image src='{{item.url}}' wx:if="{{item.show}}"></image>
+    <view class='default' wx:if="{{!item.show}}"></view>
+  </view>
+</view>
+</template>

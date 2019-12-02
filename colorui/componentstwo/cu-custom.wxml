@@ -1,0 +1,20 @@
+
+<view class="cuzgh-custom" style="height:{{CustomBar}}px">
+  <view class="cu-bar fixed {{bgImage!=''?'none-bg text-white bg-img':''}} {{bgColor}}" style="height:{{zghCustomBar}}px;padding-top:{{StatusBar}}px;{{bgImage?'background-image:url(' + bgImage+')':''}}">
+   
+  </view>
+  <view  class="cu-bar fixed  bg-img text-white"  style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;" >
+      <view class="action" bindtap="BackPage" wx:if="{{isBack}}">
+        <text class="cuIcon-back"></text>
+        <slot name="zghbackText"></slot>
+      </view>
+      <view class="zghaction border-custom"  wx:if="{{isCustom}}" style="width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px)">
+        <text class="cuIcon-back" bindtap="BackPage"></text>
+        <text class="cuIcon-homefill" bindtap="toHome"></text>
+      </view>
+      <view class="content" style="top:{{StatusBar}}px">
+        <slot name="zghcontent"></slot>
+      </view>
+      <slot name="right"></slot>
+  </view>
+</view>

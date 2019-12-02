@@ -1,0 +1,47 @@
+/* pages/upload_image/upload_image.wxss */
+.logo_box{
+  width:150rpx;
+  height:150rpx;
+  margin:15vh auto 5vh;
+}
+.logo{
+  display: block;
+  width:150rpx;
+  height:150rpx;
+  border-radius:50%;
+  margin:0 atuo;
+}
+.content{
+  width:100vh;
+  /* background: red; */
+}
+.content_text{
+  line-height: 60rpx;
+  width:100vw;
+  text-align: center;
+  /* background: red; */
+  font-size: 26rpx;
+  color: rgb(116, 109, 109)
+
+}
+.upload{
+  width:85%;
+  height: 50rpx;
+  margin:6vh auto; 
+}
+.upload_image{
+  height: 80rpx;
+  width:85vw;
+  background: #921616;
+  color:#ffffff;
+  line-height:80rpx;
+  border-radius:8rpx;
+  margin-top:20rpx;
+  
+}
+.number{
+  display: inline-block;
+  color:#921616;
+  font-size: 26rpx;
+  font-weight: bold;
+}

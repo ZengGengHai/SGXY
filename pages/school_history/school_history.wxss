@@ -1,0 +1,117 @@
+/* pages/school_history/school_history.wxss */
+.box{
+  width:100vw;
+  height:335rpx;
+  background: #921616;
+  position: fixed;
+  border-radius:0 0 20% 20%;
+  z-index: 9999;
+}
+.title{
+  width:100vw;
+  height:40rpx;
+  font-size:30rpx;
+  line-height: 40rpx;
+  font-weight: blod;
+  text-align: center;
+  color:#ffffff;
+  z-index: 999;
+  margin-bottom:10rpx;
+}
+
+.bannerPic{
+  width:80vw;
+  height:360rpx;
+  margin:0rpx auto;
+  z-index: 999;
+  background: #eeeeee;
+}
+.word{
+  width:90vw;
+  margin:0 auto;
+  font-size: 24rpx;
+  text-align: justify;
+  padding-top:450rpx;
+  text-indent: 2em;
+  line-height:45rpx;
+}
+
+
+.time_box{
+z-index: -999;
+}
+.box_content{
+  /* border:2px solid red; */
+  width:90vw;
+  margin:28rpx auto;
+  position: relative;
+  border-left:10rpx solid #921616;
+
+}
+.circle{
+  width:20rpx;
+  height:20rpx;
+  border-radius:50%;
+  border:10rpx solid #921616;
+  position: absolute;
+  left:-22.5rpx;
+  top:-32rpx;
+}
+.time_title{
+  width:90vw;
+  /* border:1rpx solid red; */
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top:-27.5rpx;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  font-weight: bold;
+  color:#921616;
+}
+.time_title_year{
+  width:40%;
+  padding-left:20rpx;  
+  line-height: 35rpx;
+  padding-right: 20rpx;
+    margin-top:-3rpx;
+}
+.time_title_title{
+  width:60%;
+  line-height: 35rpx;
+  margin-top:-3rpx;
+  /* border: 1rpx solid red; */
+}
+.year_box{
+  font-size:24rpx;
+  line-height: 45rpx;
+  padding: 30rpx 10rpx;
+  text-align: justify;
+}
+
+.lantern{
+  display: flex;
+  flex-direction: row;
+}
+.lantern_image{
+  width:70rpx;
+  height: 230rpx;
+  margin-left:0.5vw;
+  margin-top:-30rpx;
+  
+}
+
+.form{
+  margin-top:55rpx;
+  padding-left:10vw;
+  font-size:22rpx;
+  line-height: 45rpx;
+
+}
+.container{
+ 
+ width:165px;
+ height:1px;
+ position: relative;
+ margin:130rpx auto  30rpx;
+}

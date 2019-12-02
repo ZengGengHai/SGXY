@@ -1,0 +1,80 @@
+<!--pages/about/about.wxml-->
+<!--pages/about/about.wxml-->
+<cuzc-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hRIWkpU6Dnr1mkO.jpg" isBack="{{true}}"></cuzc-custom>
+
+  
+  <view class='text'> <view class='number'>1.0.0版本</view>2018年7月7号，韶院校园小助手正式上线，功能实现了地图导航功能（本部，小黄，韶医），地图位置搜索功能。水电查询功能。学校简介功能。</view>
+  <view class='text'><view class='number'>1.0.1版本</view> 主页学校简介板块类别增加第二栏目的校园动态功能，有记录浏览次数。设计开发实现花费时间：2天。</view>
+  <view class='text'><view class='number'>1.0.2版本</view> 地图导航功能收录了韶医地址图片信息</view>
+  <view class='text'><view class='number'>1.0.3版本</view> 修补学校简介介绍学校板块ios和安卓不一致问题，兼容不了ios页面上下滑动。</view>
+  <view class='text'><view class='number'>1.0.4版本</view> 地图导航收录小黄地区地图信息；修补学校介绍板块内容文字没有两端对齐问题；地图导航功能分类名称修改。</view>
+  <view class='text'><view class='number'>1.0.5版本</view>改善水电查询界面样式，绿色风格改成红色风格。</view> 
+  <view class='text'><view class='number'>1.0.6版本</view> 主页学校简介板块类别增加第三栏目的韶院视野功能，类似图片墙，设有《花卉植物》《韶院建筑》《多彩人物》《精彩壁纸》《校友分享》分类。</view> 
+  <view class='text'><view class='number'>1.0.7版本</view> 增加西区宿舍区的水电查询（樱花苑等新楼），修改水电查询界面</view>
+  <view class='text'><view class='number'>1.0.8版本</view> 增加图片墙上传功能，一人一天只能上传一张，上传前必须通过身份审核验证。</view>
+  <view class='text'><view class='number'>1.0.9版本</view> 优化正方系统验证流程，增加解绑功能</view>
+  <view class='text'><view class='number'>1.1.0版本</view>韶院小助手优化图片墙授权问题</view> 
+  <view class='text'><view class='number'>1.1.1版本</view> 韶院小助手更改图片墙全媒体水印文字为图片</view> 
+  <view class='text'><view class='number'>1.1.2版本</view> 后台管理添加水印按钮。</view>
+  <view class='text'><view class='number'>1.1.4版本</view> 关于韶院小助手页面编写成功</view>
+  <view class='text'><view class='number'>1.1.5版本</view>更改更多功能页面，修改管理页面图片</view> 
+  <view class='text'><view class='number'>1.1.6版本</view> 水电查询接入身份验证，在访问前必须经过身份验证。</view> 
+  <view class='text'><view class='number'>1.1.7版本</view>个人主页增加“我的发布按钮”，管理用户发布过的图片，后台增加下架页面，对已经全媒体中心发布过的图片有下架能力</view> 
+  <view class='text'><view class='number'>1.1.8版本</view>优化管理后台下架页面，可下架校友分享的图片，有水印可以识别图片得来源，区分《校友分享》和《全媒体中心》上传的图片</view> 
+  <view class='text'><view class='number'>1.1.9版本</view> 优化韶院小助手图片墙的分类按钮</view>
+  <view class='text'><view class='number'>1.2.0版本</view> 韶院小助手水电查询增加全媒体标志，解决地图title在vivo  X7底部缺失问题</view>
+  <view class='text'><view class='number'>1.2.1版本</view>韶院小助手修改分享封面</view> 
+  <view class='text'><view class='number'>1.2.2版本</view> 韶院小助手使用须知添加开发者和运营者申明</view> 
+  <view class='text'><view class='number'>1.2.3版本</view> 韶院小助手更改水电查询接口</view>
+  <view class='text'><view class='number'>1.2.4版本</view> 韶院小助手第一板块中的校园消息添加了信息来源</view>
+  <view class='text'><view class='number'>1.2.5版本</view> 韶院小助手封面增加灯笼</view>
+  <view class='text'><view class='number'>1.2.6版本</view>韶院小助手添加韶院简史</view> 
+  <view class='text'><view class='number'>1.2.7版本</view>韶院小助手添加相框剪辑功能</view> 
+  <view class='text'><view class='number'>1.2.8版本</view> 韶院小助手修补相框剪辑页面兼容机型问题</view>
+  <view class='text'><view class='number'>1.2.9版本</view> 韶院小助手第一板块先加载图片。优化图片墙加载速度。图片加载增加“校友分享类别”</view>
+  <view class='text'><view class='number'>1.3.0版本</view>韶院小助手修补水电查询页面丁香f栋无法查询问题。发现水电的value写错。 2019.3.12</view> 
+  <view class='text'><view class='number'>1.3.1版本</view> 获取用户地理位置接口规则有改变，必须备注信息新用户才可以调取地理位置接口。同时本部地理位置种类位置调换，快递点展示靠前。 2019.3.13</view> 
+  <view class='text'><view class='number'>1.3.2版本</view>韶院小助手点歌功能开发完毕 2019.3.16</view> 
+  <view class='text'><view class='number'>1.3.3版本</view>韶院小助手图片墙个人主页完成 2019.3.29</view> 
+  <view class='text'><view class='number'>1.3.4版本</view>更改图片详情底部五个按钮为图片右下或者屏幕右下变。优先放置在图片右下。高度不够才变成屏幕右下。 2019.3.30</view>
+  <view class='text'><view class='number'>1.3.5版本</view> 修改图片墙网络图片加载失败时替换图片url 2019.3.31</view>
+  <view class='text'><view class='number'>1.3.6版本</view>留言回复功能已经实现 2019.4.7</view> 
+  <view class='text'><view class='number'>1.3.7版本</view> 图片墙可以回复留言 2019.4.9</view> 
+
+  <view class='text'><view class='number'>1.3.8版本</view>图片墙实现回复中的回复 2019.4.10</view> 
+  <view class='text'><view class='number'>1.3.9版本</view>修补留言回复细节。用户不可以对自己的留言回复 2019.4.11</view> 
+  <view class='text'><view class='number'>1.4.0版本</view> 点歌功能实现留言精选 2019.4.12</view>
+  <view class='text'><view class='number'>1.4.1版本</view> 图片墙上传页面开发完成，用户上传可以选着分类，以及定位。 2019.4.13</view>
+  <view class='text'><view class='number'>1.4.2版本</view>我的发布，我的收藏中的图片墙优化完成 2019.4.14</view> 
+  <view class='text'><view class='number'>1.4.3版本</view>图片类别由【‘校友分享’，‘韶院建筑’，‘多彩人物’，‘精美风景’】改成【‘韶院风景’，‘原创壁纸’，‘校园美食’，‘校园萌宠’，‘毕业剪影‘，‘其它类别’】 2019.4.16 </view> 
+  <view class='text'><view class='number'> 1.4.4版本</view>学校简介模块位子移到首页灯笼处，校园消息移动到更多功能那里。首页的第一模块改成：韶院视野，原创壁纸，投稿排行。   2019.4.18</view> 
+  <view class='text'><view class='number'> 1.4.5版本</view>修补一些bug,并优化了性能  2019.4.21</view>
+  <view class='text'><view class='number'>1.4.6版本</view> 修补bug：点击我的发布里面审核未通过或者审核失败的图片，之前是可以查看到图片详情，并分享出来，现在已经修补好这个漏洞 2019.4.22 </view>
+  <view class='text'><view class='number'>1.4.7版本</view>修补bug：图片详情页面评论回复数和用户操作保持同步，用户在回复内容删除就计数加一，反则加一。同时设置触发器，主贴人删除，回复的replay_id和come_id也清空，页面加载时评论保持和页面渲染出来数据数一致。  2019.4.25</view> 
+  <view class='text'><view class='number'>1.4.8版本</view> 花了4天对小程序皮肤大改造，用上colorui最流行得样式。改造完成。   2019.5.22</view> 
+  <view class='text'><view class='number'>1.4.9版本</view> 修补回复评论中回复内容超出盒子bug,图片下架页面图标没有正常显示bug修补完毕，以及其它页面添加胶囊。   2019.5.24</view> 
+  <view class='text'><view class='number'>1.5.0版本</view> 修补图片墙加载重复图片bug。   2019.5.25</view> 
+  <view class='text'><view class='number'>1.5.1版本</view> 水电查询页面修改图片，部分页面修改背景颜色为白色   2019.5.26</view> 
+   <view class='text'><view class='number'>1.5.2版本</view> 给cxm图片墙审核权限，图片详情页面定位按钮样式优化，并识别距离，图片详情页面修补上传按钮移动问题,图片墙和图片个人中心图片展示是否有定位。  2019.5.28</view>
+
+
+
+
+
+
+<!-- <view class='title'>
+  <view class='title_text'>使用须知</view>
+  </view>
+<view class='content'>
+  
+  <view class='text'> <view class='number'>1</view> 图片墙目前分类有: 《花卉植物》、《韶院建筑》、《多彩人物》、《精彩壁纸》、《校友分享》。其中《花卉植物》、《韶院建筑》、《多彩人物》、《精彩壁纸》由全媒体中心负责更新上传图片。校友可以点击左下角进行投稿，上传与韶院相关的照片或创意图集，待审核通过后，将会在《校友分享》中展示。</view>
+  <view class='text'><view class='number'>2</view> 韶院视野的界面，只展示了一部分种类图片，点击右下角“分类筛选”，即可浏览更多不同类别的照片。</view>
+  <view class='text'><view class='number'>3</view> 开设“精彩壁纸”分类是为了能够让学生分享下载各类精美的图片，展现校园文化。</view>
+  <view class='text'><view class='number'>4</view> 为了维护图片的版权，对于照片墙所展示的全部照片，若需要用在其他平台发布或者商业用途，请在后台客服留言，获得图片提供者同意后方可使用。</view>
+  <view class='text'><view class='number'>5</view> 正方教务系统验证是为了隔绝校外人使用上传类的功能，本小程序数据库不保留用户的账号密码，在功能类用途只调用到学号作为身份识别，同时为了营造健康的网络环境，上传图片携带学号信息，并人工审核，不可上传包含色情，违法的图片。如果发现这类图片我们有权把学号上报学校进行通报批评，新生暂时可能没有账号，进入学校后等待学院安排再注册。</view>
+  <view class='text'><view class='number'>6</view> 地图定位功能，如果有错误信息或者想增加收录地点，请及时在客服留言联系我们。我们目前只受理增加公共地点，不接收组织，部门，协会，店铺，创业基地小店以及盈利机构等位置定位服务。</view> 
+  <view class='text'><view class='number'>7</view> 韶院校园小助手由环创电脑工作室进行开发维护，由全媒体中心提供协助并拥有运营所有权。</view> 
+
+</view> -->
+
+

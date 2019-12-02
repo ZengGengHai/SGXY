@@ -1,0 +1,10 @@
+/* pages/aiministrator/aiministrator.wxss */
+.Sowing_map{
+  height: 120rpx;
+  
+}
+.Sowing_map_console{
+  margin-top:5%;
+  border: 1px solid black;
+  padding:40rpx;
+}

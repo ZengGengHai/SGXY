@@ -1,0 +1,5 @@
+<!-- 顶部胶囊 -->
+<view class="canui-head-box" style="top:{{StatusBar}}px;z-index:999;">
+    <view class='cuIcon-back' bindtap='BackPage' open-type="navigateBack" hover-class="none" ></view>
+    <view class='cuIcon-home' bindtap='toHome' open-type="navigateBack" hover-class="none"></view>
+</view>

@@ -1,0 +1,31 @@
+<!--pages/system_validation/system_validation.wxml-->
+<!-- 胶囊 -->
+<canui-head-box style="z-index:666;"></canui-head-box>
+
+<image class="image" src="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1i2w8w7LTKGfWz4g.png" mode="aspectFill">
+</image>
+  <view class='Style_list'>
+    <view class='title'>教学一体化服务平台身份验证</view>
+
+    <view class='box'>
+            <view class='input_list'>
+              <view class='account_number'>学号:</view>
+              <input class='input_account_number' placeholder="输入你的学号"  bindconfirm="UserInput_name"   type="number" confirm-type="next" bindinput="Set_name_value"  value="{{Student_ID}}"/>
+            </view>
+            <view class='input_list'>
+              <view class='password_number'>密码:</view>
+              <input class='input_password_number' placeholder="输入你的密码" password="true" bindconfirm="UserInput_password;"  type="text" confirm-type="done" bindinput="Set_password_value" value="{{User_password}}"/>
+            </view>
+            <view class='input_list'>
+              <view class='login_box'> 
+                <button class='login'   style='font-size:26rpx;background:{{button_color}};color:#ffffff;'    bindtap='Button'>{{identity}}</button>
+              </view>
+            </view>
+    </view>
+    <view class='tip'>
+      <view class='tip_title'>使用须知:</view>
+      验证过程中数据库不会保留用户的账号和密码，验证成功数据保存在用户的手机本地文件夹，本小程序只拿用户的学号进行对功能类的数据行赋值.
+    </view>
+  </view>
+
+ 

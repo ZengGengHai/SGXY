@@ -1,0 +1,42 @@
+  <template name='user_card'>
+      <view class='business_card bg-white radius shadow-warp '   >
+     <view class='user_info_img'><image  class='user_image1' src='{{options.user_image}}'></image></view>
+     <view class='user_info'>
+       <view class='user_info_name'> {{options.user_name}}</view>
+       <view class='user_info_time'>发布于 {{options.created_at}} </view>
+     </view>
+    <view class='person'><image class='right_img' src='../../images/icon/right.png' ></image></view>
+   </view>
+  
+  </template>
+
+
+ <wxs src="./user_card.wxs" module="timeTranslate"></wxs>
+  <template name='user_fllow_card'>
+    <block wx:for="{{options}}" wx:key="{{item.index}}">
+      <view class='business_card1 radius shadow-warp bg-black '   bindtap='person_info' hover-class="none"  data-user_id="{{item.focus_id.id}}"  data-user_image="{{item.focus_id.avatar}}" data-user_name="{{item.focus_id.nickname}}">
+      <view class='user_info_img'><image  class='user_image1' src='{{item.focus_id.avatar}}'></image></view>
+      <view class='user_info'>
+        <view class='user_info_name'> {{item.focus_id.nickname}}</view>
+        <view class='user_info_time'>关注于 {{timeTranslate.timestampToTime(item.created_at)}} </view>
+      </view>
+      <view class='person'><image class='right_img' src='../../images/icon/right.png' ></image></view>
+    </view>
+  </block>
+</template>
+
+
+ <template name='Picture_User_Ranking'>
+    <block wx:for="{{userList}}" wx:key="{{item.index}}">
+      <view class='business_card1 radius shadow-warp bg-white'   bindtap='person_info' hover-class="none"  data-user_id="{{item.user_id}}"  data-user_image="{{item.image_url}}" data-user_name="{{item.nickname}}">
+      <view class='user_info_img'>
+        <image  class='user_image1' src='{{item.image_url}}'></image>
+      </view>
+      <view class='user_info'>
+        <view class='user_info_name_box'> <view>{{item.nickname}} </view><view class='num'>图片数量:{{item.image_number}}张</view></view>
+        <view class='user_info_time'>创建于 {{timeTranslate.timestampToTime(item.created_at)}} </view>
+      </view>
+      <view class='person'><image class='right_img' src='../../images/icon/right.png' ></image></view>
+    </view>
+  </block>
+</template>

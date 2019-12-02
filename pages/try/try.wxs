@@ -1,0 +1,31 @@
+var myDate = getDate();
+// 日期格式化
+function formatDate(nowDate) {
+  var year = nowDate.getFullYear() + '年';
+  var month = (nowDate.getMonth() + 1) + '月';
+  var date = nowDate.getDate() + '日';
+  var week = ["星期日", "星期六", "星期五", "星期四", "星期三", "星期二", "星期一",];
+  var day = week[nowDate.getDay()];
+  // 得到当前日期格式
+  return year + month + date + '' + day + '\n';
+}
+
+// 获取当前日期整周
+function getWeek(nowDate) {
+  num = nowDate.getDay() - 1; // 获取当前日期在本周第几天
+  console.log(num);
+  var weeklist = '';
+  for (i = 0; i < 7; i++) {
+    var diff = (num - i) * 24 * 60 * 60 * 1000; // 与当前日期相差几天
+    console.log(diff);
+    var dDay = getDate(nowDate.getTime() - diff); // 差值日期
+    console.log('dDay:' + dDay);
+    weeklist = weeklist + formatDate(dDay) + '\n';
+  }
+  return weeklist;
+}
+module.exports = {
+  myDate: formatDate(myDate),
+  weeklist: getWeek(myDate)
+}
+

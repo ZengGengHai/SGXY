@@ -1,0 +1,40 @@
+<!--pages/check_image/check_image.wxml--> 
+<!-- 胶囊 -->
+<cuzc-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hRIWkpU6Dnr1mkO.jpg" isBack="{{true}}"></cuzc-custom>
+      
+            <scroll-view scroll-y   style=" height:calc(100vh - {{CustomBar}}px+5px);"   bindscrolltolower="image_lower" >
+            
+              <view class='box'>
+                <!-- <view class='upload' bindtap='upload_image'  ><image src='../../images/icon/upload.png' class='upload_image'></image></view> -->
+                <view style="height:0vh;overflow:hidden">
+                  <view wx:for="{{images}}" wx:key="index">
+                    <image  id="{{index}}" src="{{item.pic}}" data-item="1" bindload="loadimg"  binderror="error" ></image>
+                  </view>
+                </view>
+                <view style="width:100%;height:auto">
+                    <view class="img_item_left img_item">
+                        <view wx:for="{{oneimages}}" wx:key="index" >
+                              <image bindtap='image_details' class='image_box' data-imageUrl="{{item.url}}"  lazy-load="{{true}}"  data-category='{{item.category}}'  data-user_name='{{item.user_name}}' data-created_at='{{item.created_at}}' data-height='{{item.height}}' data-user_image='{{item.user_image}}' data-id='{{item.user_id}}' lazy-load="{{true}}" src="{{item.url}}" data-item="{{index}}"  data-height='{{item.height}}' data-user_image='{{item.user_image}}' data-id='{{item.user_id}}'  data-created_by="{{item.created_by}}"  data-img_width="{{item.img_width}}"  data-content="{{item.content}}" data-img_height="{{item.img_height}}"  data-collection_quantity="{{item.Collection_quantity}}" data-longitude="{{item.longitude}}" data-latitude="{{item.latitude}}"  data-origin='left'  data-shoucangid='{{item.shoucangid}}' style="width:100%;height:{{item.height}}px"></image>
+                        </view>
+                        <view wx:if="{{one}}" class='next_word' bindtap='next'>{{next_word}}</view>
+                    </view>
+                    <view class="img_item_right img_item">
+                        <view wx:for="{{twoimages}}" wx:key="index">
+                                <image bindtap='image_details' class='image_box' data-imageUrl="{{item.url}}"  lazy-load="{{true}}"  data-category='{{item.category}}'  data-user_name='{{item.user_name}}' data-created_at='{{item.created_at}}'   data-height='{{item.height}}' data-user_image='{{item.user_image}}'  data-id='{{item.user_id}}' data-item="{{index}}" src="{{item.url}}"  data-height='{{item.height}}' data-user_image='{{item.user_image}}' data-id='{{item.user_id}}'  data-created_by="{{item.created_by}}"  data-img_width="{{item.img_width}}"  data-content="{{item.content}}" data-img_height="{{item.img_height}}"  data-collection_quantity="{{item.Collection_quantity}}" data-longitude="{{item.longitude}}" data-latitude="{{item.latitude}}" data-origin='right'  data-shoucangid='{{item.shoucangid}}' style="width:100%;height:{{item.height}}px"></image>  
+                        </view>   
+                        <view wx:if="{{two}}" class='next_word' bindtap='next'>{{next_word}}</view>    
+                    </view>        
+                </view>
+              </view>
+            </scroll-view>
+          
+
+            <view class="modal-mask"  catchtouchmove="preventTouchMove" wx:if="{{showModal}}"  bindtap='close_modal'>
+                <view class="modal-dialog" catchtap="maopao" wx:if="{{showModal}}"  catchtouchmove="preventTouchMove">
+                  <view class='function' bindtap='see'><image class='icon icon_left' src='../../images/icon/eye.png'></image></view>
+                  <view class='function' bindtap='give_up'><image class='icon' src='../../images/icon/give_up.png'></image></view>
+                </view>
+            </view>
+  
+
+

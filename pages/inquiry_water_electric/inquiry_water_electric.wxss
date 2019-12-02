@@ -1,0 +1,296 @@
+
+page{
+  background:#fff;
+}
+
+.logo{
+  
+  width:100%;
+  height: 60vh;
+    /* background: linear-gradient(red, #11a364,blue,#52a311);  */
+    /* background: linear-gradient(to bottom,#921616,#921616); */
+  position: absolute;
+  top:-49%;
+  left: 0rpx;
+  /* border-bottom: 1px solid black; */
+  /* box-shadow: 1px 1px 2px #999999;  */
+  /* background-image:url("https://cloud-minapp-13676.cloud.ifanrusercontent.com/1i3LYLBYZZbJb1kC.png");
+  background-repeat:no-repeat; 
+  background-size:cover; */
+  /* background-position:bottom center; */
+    /* opacity: 0.2; */
+    z-index: 500;
+    overflow:visible;
+    /* box-shadow: 0px 0px 30px #222; */
+}
+.logo .water_electric{
+    width:570rpx;
+    height: 340rpx;
+     /* background: red;   */
+    position: absolute;
+    bottom: 20%; 
+    left: 50%;
+    margin-left:-285rpx;
+    font-size: 30rpx;  
+}
+
+.logo .water_electric .water{       /*水*/
+  width:60%;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  margin:40rpx auto;
+  height:60rpx; 
+  border-radius: 10rpx;
+}
+.logo .water_electric .water .image{    /*水的图标*/
+  width:15%;
+  background: white;
+  padding-left:10rpx;
+  /* background: blue; */
+  margin-left: 10rpx;
+
+}
+.logo .water_electric .water .name{     /*文字“水费”*/
+  width:30%;
+  background: white;
+  font-size:30rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.logo .water_electric .water .word{     /*水费余额*/
+  width:50%;
+  text-align: right;
+  line-height: 60rpx;
+  padding-right:65rpx;
+  font-weight: bolder;
+
+}
+.logo .water_electric .electric{       /*电*/
+  width:60%;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  margin:40rpx auto;
+  height:60rpx;
+  border-radius: 10rpx;
+  
+}
+.logo .water_electric .electric .image{  /*电费的图标*/
+  width:15%;
+  background: white;
+  padding-left: 10rpx;
+  margin-left: 10rpx;
+}
+.logo .water_electric .electric .name{     /*文字“电费”*/
+  width:30%;
+  background: white;
+  font-size:30rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.logo .water_electric .electric .word{   /*电费余额*/
+  width:50%;
+  text-align: right;
+  line-height:60rpx;
+  padding-right:65rpx;
+  font-weight: bolder;
+
+}
+.logo .submit{                   
+  width:60%;
+  text-align: center;
+  line-height:60rpx;
+  font-size: 30rpx;
+
+}
+.logo  .logo_image{                       /*logo*/
+  position: absolute;
+  bottom: -50rpx;
+  left:50%;
+  background: white;
+  padding: 20rpx 20rpx 15rpx 20rpx;
+  border-radius:50%;
+  margin-left:-50rpx;
+  border: 1px solid black; 
+  box-shadow: 0px 1px 2px black;   
+  z-index:999;
+  
+}
+
+.logo_left,.logo_right{
+  position:absolute;
+  bottom: 22rpx;
+  width:50vw;
+  height:100rpx;
+}
+
+.logo_left{
+  left:-3vw;
+  bottom:27rpx;
+  transform:rotate(9deg);
+}
+.logo_right{
+  right:-3vw;
+  bottom:27rpx;
+  transform:rotate(-9deg);
+}
+
+
+
+
+.inquiries{                            /*水电费查询*/
+  width:550rpx;
+  height: 320rpx;
+   /* background: red;  */
+  margin:36vh auto;
+ 
+
+
+}
+.inquiries  .buildnum,.inquiries  .roomno{                /*楼牌号*/
+  width:80%;
+  height:60rpx;
+  line-height: 60rpx;
+   /* background: blue;  */
+  margin:60rpx auto;
+
+}
+
+.inquiries  .buildnum .picker,.inquiries  .roomno .picker{
+  display: flex;
+  flex-direction: row;
+}
+.inquiries  .buildnum .picker .image,.inquiries .roomno .picker .image{
+  width:20%;
+  margin-top:10rpx;
+}
+
+.inquiries  .buildnum .picker .word_box,.inquiries  .roomno .picker .word_box {
+  width:78%;
+  height:60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-bottom: 1px solid black;
+   /* background: red;  */
+  display: flex;
+  font-size:28rpx;
+  flex-direction: row;
+}
+.inquiries  .buildnum .picker .word,.inquiries  .roomno .picker .word {
+  width:90%;
+  margin-left:-5%;
+ 
+}
+.inquiries  .buildnum .picker .word .buttom_image .inquiries  .roomno .picker .word .buttom_image{
+ width: 10%;
+ padding-top:12rpx;
+}
+.inquiries .inquiries_buttom{
+  width:420rpx;
+  height: 60rpx;
+ line-height: 60rpx;
+ font-size: 30rpx;
+ margin-top:90rpx;
+ box-shadow: 2rpx 2rpx 4rpx rgba(73, 72, 72, 0.712);
+}
+
+
+
+
+
+/*水电查询结果滑动出现  */
+
+
+
+
+
+aa{
+  z-index: -111;
+}
+
+
+
+
+
+
+.container{
+ width:165px;
+ height:100rpx;
+ position:absolute;
+ bottom:160rpx;
+ top:86vh;
+ left:50%;
+ margin-left:-82.5px;
+ z-index: -22;
+}
+
+
+
+.balance{
+  width:100%;
+  height: 40vh;
+  position: absolute;
+  bottom:-40vh;
+  left: 0rpx;
+  background: #fff;
+}
+
+.balance  .logo_image2{                       /*logo*/
+  position: absolute;
+  top: -50rpx;
+  left:50%;
+  background: white;
+  padding: 20rpx 20rpx 15rpx 20rpx;
+  border-radius:50%;
+  margin-left:-50rpx;
+  border: 1px solid black; 
+  box-shadow: 0px 1px 2px black;   
+
+}
+
+.balance_navbar{
+  position: absolute;
+  top: 50rpx;
+  left:50%;
+  margin-left: -150rpx;
+  display: block;
+  background: #fff;
+  width:300rpx;
+  height: 70rpx;
+  /* background: red; */
+  border:1px solid #9bc08a;
+  border-radius:15rpx;
+  color: #9bc08a;
+
+}
+
+.balance_navbar .item{
+ 
+  text-align: center;
+  line-height: 70rpx;
+}
+
+/* .balance_navbar .item.active{
+  color: white;
+  background: #9bc08a;
+}
+.balance_navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 4rpx;
+  background: #9bc08a;
+} */
+
+.ec-canvas {
+  position: absolute;
+  width: 80vw;
+  height:500rpx;
+  right: 30rpx;
+  top:60rpx;
+  margin-right:10vw;
+  
+    /* border-radius: 20rpx; */
+  /* box-shadow: 4rpx 4rpx 10rpx #999; */
+}

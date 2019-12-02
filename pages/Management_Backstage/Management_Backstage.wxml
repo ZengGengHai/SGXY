@@ -1,0 +1,62 @@
+<!--pages/Management_Backstage/Management_Backstage.wxml-->
+
+<!-- 胶囊 -->
+<canui-head-box></canui-head-box>
+
+<image class="image" src="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hTLT4DpSZSLuvPz.png" mode="aspectFill">
+  
+  <!-- <image class='top_image' src="../../images/top10.png"  ></image> -->
+   <!-- <image class='bottom_image' src="../../images/bottom.png"  ></image> -->
+  <view class='Style_list'>
+
+<!-- 管理者logo -->
+  
+  <view>
+  <block wx:for="{{Managers}}">
+    <image class='Managers'  src="{{item.User_image}}" data-name='{{item.User}}' mode="aspectFill" bindtap='Managers'>
+  </image> 
+  </block>
+  </view>
+
+
+  <view wx:if="{{qmt_managers}}"> <!--全媒体登录成功后可见 -->
+    <block wx:for="{{Imaget_category}}">
+     <view class='classly_list'  data-kind='{{item.type_name}}' bindtap='input_image'>{{item.type_name}}</view>   
+    </block>
+    <view class="watermark">
+      <switch checked bindchange="watermarkChange" color="#961212"/>水印开启状态:{{watermark}}
+    </view>
+    <view class="check_image" bindtap='check_image'>审核图片</view>
+    <view class='give_up_image' bindtap='give_up_image'>图片下架</view>
+  </view>
+
+  <view wx:if="{{hc_managers}}"> <!--环创工作室可见-->
+    <view class='home' bindtap='Home'>环创官网</view>
+  </view>
+
+
+<!-- 点击成员头像显示详情的灰色背景盒子 -->
+   <view class="modal-mask"  catchtouchmove="preventTouchMove" wx:if="{{showModal}}"  bindtap='close_QMT_modal'></view>
+
+    <view class="qmt_modal-dialog" wx:if="{{showModal}}" catchtouchmove="preventTouchMove">
+      <view class='user'>
+        <view class='user_name'>{{click_Managers}}</view>
+        <view class='input_list'>
+          <view class='account_number'>账号:</view>
+           <input class='input_account_number' placeholder="输入你的账号"  bindconfirm="UserInput_name"   type="text" confirm-type="next" bindinput="Set_name_value"  value="{{User_name}}" auto-focus/>
+        </view>
+        <view class='input_list'>
+          <view class='password_number'>密码:</view>
+          <input class='input_password_number' placeholder="输入你的密码"   password="true" bindconfirm="UserInput_password;"  type="text" confirm-type="done" bindinput="Set_password_value" value="{{User_password}}"/>
+        </view>
+        <view class='input_list'>
+          <view class='login_box'> 
+            <button class='login'  style='font-size:26rpx;'  type="primary"  bindtap='Login'>登录</button>
+          </view>
+        </view>
+      </view>
+    </view> 
+
+
+  </view>
+</image>

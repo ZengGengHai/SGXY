@@ -1,0 +1,28 @@
+<!--pages/The_electronic_magazine/The_electronic_magazine.wxml-->
+
+
+
+  <scroll-view scroll-y  class='book_list' style="height:100vh;" bindscrolltolower="{{!buttonClicked?'loading':''}}"  >
+    <swiper  autoplay interval="{{interval}}" circular previous-margin="{{leftMargin}}" next-margin="{{rightMargin}}" bindchange="handleChange" >
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" mode='aspectFill'  class="slide-image {{currentIndex == index ? 'active': ''}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+    <block  wx:for="{{cover_img}}">
+     <navigator url="../E_book/E_book?book_url={{item.book_url}}&book_title={{item.book_title}}&chapter={{item.chapter}}&cover_img={{item.cover_img.path}}&id={{item.id}}&created_at={{item.created_at}}&created_by={{item.created_by}}" >
+      <view class='box_box'>
+        <view class='book_title'> 
+          <image src='../../images/icon/quan.png' class='quan'></image>
+          <view class='title_word'>{{item.book_title}}</view>
+        </view>
+        <view class='book_img_box'>
+          <image class='book_img' mode='aspectFill' src="{{item.cover_img.path}}" ></image>
+        </view>
+      </view>
+      </navigator>
+    </block>
+  
+    
+  </scroll-view>

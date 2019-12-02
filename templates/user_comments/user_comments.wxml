@@ -1,0 +1,48 @@
+  <template name='user_comments'>
+    <view class='user_song_name'>
+      <block  wx:for-items="{{user_word_list}}" wx:key="{{item.content_id}}">
+        <view class='user_box'>
+          <view class='img'><image src="{{item.user_img}}" ></image></view>
+          <view class='user_info_box'>
+          <view class="info_box">
+            <view class='info_name'>{{item.user_name}}</view>
+            <view class='delete_box'>
+                  <image wx:if="{{item.is_me}}" class='delete' data-index="{{index}}" data-id="{{item.content_id}}" bindtap="{{!buttonClicked?'delete_content':''}}" src='../../images/icon/lajitong.png'></image>
+                  <!-- <image  class='shoucang'     src='../../images/icon/shoucang1.png' data-id="{{item.content_id}}"   bindtap="{{!buttonClicked?'shoucang':''}}" ></image> -->
+                <image class='huifu' src="../../images/icon/contact.png" ></image>
+                <view   class='replay_num' >{{item.num}}</view>
+            </view>   
+          </view>
+        
+            <view class='info_word' data-id="{{item.content_id}}" data-created_by="{{item.created_by}}" data-replay_list="{{item.Replay_list}}" data-num="{{item.num}}" data-replay_limit="{{item.replay_limit}}"  data-replay_offset="{{item.replay_offset}}"  bindtap="getid">{{item.content}}</view>
+            <view class='time_delete_box'>
+                <view class='info_time'>{{item.content_time}}</view>
+                <!-- <view class='delete'>
+                   <image wx:if="{{item.is_me}}" class='delete' data-index="{{index}}" data-id="{{item.content_id}}" bindtap="{{!buttonClicked?'delete_content':''}}" src='../../images/icon/lajitong.png'></image>
+                </view> -->
+            </view>
+              <view class='replay' wx:if="{{item.show_box}}" data-id="{{item.content_id}}" data-replay_list="{{item.Replay_list}}" data-num="{{item.num}}" data-replay_limit="{{item.replay_limit}}"  data-replay_offset="{{item.replay_offset}}"   capture-bind:tap="onTap" >
+                <view>
+                  <block  wx:for-items="{{item.Replay_list}}" wx:key="{{item.content_id}}">
+                    <view class='Replay_user_box'>
+                      <view ><image src="{{item.user_img}}" class='Replay_img' ></image></view>
+                      <view class='Replay_user_info'>
+                        <text class=" Replay_info_name {{item.show_second_box?'Replay_info_name_right':''}} ">{{item.user_name}}{{item.show_second_box?' 回复  ':':'}}</text>
+                        <view class='second' wx:if="{{item.show_second_box}}">{{item.name}}</view>
+                        <text class='Replay_info_word' data-user_name="{{item.user_name}}" data-created_by="{{item.created_by}}" bindtap='replay_second'>{{item.content}}</text>
+                        <view class='Replay_info_time'>{{item.content_time}}</view>
+                        <view class='Replay_time_delete_box'>                    
+                              <image  wx:if="{{item.is_me}}" class='Replay_delete' data-index="{{index}}" data-id="{{item.content_id}}" bindtap="{{!buttonClicked?'delete_replay':''}}"   data-replay_id="{{item.replay_id}}"  src='../../images/icon/lajitong.png'></image>
+                        </view>
+                      </view>
+                    </view>
+
+                  </block>
+                </view>
+                <view  class='replay_next radius bg-gradual-green' wx:if="{{item.replay_next}}" data-replay_limit="{{item.replay_limit}}" data-replay_offset="{{item.replay_offset}}" data-replay_next="{{item.replay_next}}" data-index="{{index}}" bindtap='replay_more' data-content_id="{{item.content_id}}" data-Replay_list="{{item.Replay_list}}">展开更多回复</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </template>

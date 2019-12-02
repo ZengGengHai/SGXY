@@ -1,0 +1,65 @@
+/* pages/search_place/search_place.wxss */
+  @import '../navigator/navigator.wxss'; 
+page{
+  background:#fff;
+}
+.search_style{
+  
+  /* background: #921616;  */
+  width:100vw;
+  position:fixed;
+  display: flex;
+  height:5vh;
+  flex-direction: row;
+  color:#ffffff;
+  font-size: 26rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+  text-align: center;
+  z-index:600;
+}
+.search_style .school_box{
+ 
+  width:33%;
+ 
+  z-index:600;
+                      
+  /* 根据search_place.js里面学校分区的数量来改变width */
+}
+.search_style .school_box .school_name{
+  width:200rpx;
+  margin:0 auto;
+  z-index:600;
+
+}
+
+.section{
+ width: 75%;
+ height: 50rpx;
+ box-shadow: 0px 0px 5px #404040;
+ margin:40rpx auto 0; 
+ padding: 3rpx 0 5rpx 80rpx;  
+ position: relative;
+
+ border-radius: 10rpx;
+ /* background: red; */
+}
+.icon_search{
+  width: 50rpx;
+  height: 50rpx;
+  
+  position: absolute;
+  left:5rpx;
+  top:5rpx;
+}
+
+
+.school_bottom{
+border-bottom: 0rpx solid #ffffff;
+
+}
+.school_bottom_hover{
+  border-bottom:3px solid #ffffff;
+
+}
+

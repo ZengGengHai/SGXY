@@ -1,0 +1,48 @@
+/* pages/song_name_more/song_name_more.wxss */
+@import '../choose_song/choose_song.wxss';
+.song_list{
+  width:100vw;
+  margin-top:6rpx;
+   
+}
+.kind-list-item{
+  margin:30rpx 0;
+  
+}
+.see{
+  padding:30rpx;
+  text-align: center;
+  margin:40rpx;
+}
+.time{
+  padding:5rpx 15rpx 30rpx;
+  text-align: center;
+  width:100vw;
+  font-size: 30rpx;
+}
+.song_name_list{
+  text-align: center;
+}
+
+.song_name{
+  font-size: 22rpx;
+  padding:10rpx 5rpx 20rpx;
+  padding-left: 25rpx;
+  color:#921616;
+}
+.song_name:first-child{
+  font-size: 22rpx;
+  padding:10rpx 5rpx;
+  padding-left: 25rpx;
+  color:#921616;
+}
+.song_name:last-child{
+  padding-bottom: 60rpx;
+}
+ .song:first-child{
+ border-top:1px dotted #eee;
+} 
+.song{
+  border-top:1px dotted #eee;
+}
+

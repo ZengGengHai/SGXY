@@ -1,0 +1,58 @@
+<!--pages/place/place.wxml-->
+
+
+
+<!-- 胶囊 -->
+<canui-head-box></canui-head-box>
+
+<view class="wrapper">
+<scroll-view class="container"  scroll-y="true"   style="height: 100%">
+  <!-- 信息介绍部分 -->
+  <view >
+    <!-- banner图片 -->
+    <swiper class="bannerPic" autoplay="true" interval="3000" indicator-dots="true">
+      <swiper-item wx:for="{{ bannerUrl}}">
+        <image src="{{ item }}" class="bannerPic"  mode='aspectFill'></image>
+      </swiper-item>
+    </swiper>
+
+    <!-- 介绍信息 -->
+    <view class="intro-info padding-leftRight">
+      <!-- 地点名称及logo -->
+      <!-- <view class="intro-title border-bottom">
+         <image  wx:if="{{logoUrl}}"  src="{{ logoUrl }}" class="intro-title-logo" ></image> 
+        <view class="intro-title-text">{{ companyName }}</view>
+      </view> -->
+      <!-- 电话及地址 -->
+      <!-- <view class="intro-contact border-bottom" catchtap="makePhoneCall" wx:if="{{telephone}}" >
+        <view class="intro-contact-icon iconfont icon-telephone"></view>
+        <view class="intro-contact-text">{{ telephone }}</view>
+        <view class="intro-contact-more iconfont icon-arrow"></view>
+      </view> -->
+      <!-- 到这里去 -->
+      <view class="intro-contact border-bottom" catchtap="findLocation" data-num="{{num}}">
+        <view class="intro-contact-icon iconfont icon-location"></view>
+        <view class="intro-contact-text">{{ location }}</view>
+        <!-- <view class="intro-contact-more iconfont icon-arrow"></view> -->
+        <view>
+           <view>
+           <view  class='go_map' style='position:absolute;right:40rpx;top:-15rpx;background-image:url(https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hSgiTFwXNCd65jM.png); background-size:100% 100%;' data-list-id="{{ item.id }}" data-longitude="{{ item.longitude }}" data-latitude="{{ item.latitude}}" data-origin=" " >
+               <image src='../../resources/next.png' style='position:absolute;width:35rpx;height:40rpx;margin: 6rpx 0 3rpx 28rpx;'></image>
+               <view style='font-weight:bold;font-size:16rpx;margin:0 auto;color:white;width:100%;text-align:center;'>到这去</view>
+              </view>
+        </view>
+        </view>
+      </view>
+      <!-- 地点介绍 -->
+      <view class="intro-main ">
+      
+        <view class="intro-main-text">{{ introText }} </view>
+      </view>
+
+    </view>
+  </view>
+
+</scroll-view>
+</view>
+
+

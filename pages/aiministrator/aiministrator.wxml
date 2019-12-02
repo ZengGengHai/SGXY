@@ -1,0 +1,15 @@
+<!--pages/aiministrator/aiministrator.wxml-->
+<button class="Sowing_map" bindtap='Sowing_map' >轮播图</button>
+
+<view wx:if="{{Sowing_map_console}}">
+ <block wx:for="{{Sowing_map_item}}" wx:key="key">
+  <view class='Sowing_map_console' wx:if="{{Sowing_map_console}}">
+    <view>
+      <image style='width:350rpx;height:150rpx;border:1px solid black;' src='{{item.path}}'></image>
+    </view>
+    <view>修改</view>
+    <view>删除</view>
+  </view>
+</block>
+<button bindtap='upload' >上传</button>
+</view>

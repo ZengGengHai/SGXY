@@ -1,0 +1,78 @@
+
+<!-- 胶囊 -->
+<canui-head-box></canui-head-box>
+
+<scroll-view scroll-y style="height:100vh;" scroll-top="{{scroll_top}}" bindscrolltolower="image_lower" >
+
+<image class="img-bg" src="{{user_image}}" mode='aspectFill'  binderror="error"  >
+</image>
+<view class='box'>
+  <image class='logo' src="{{user_image}}"></image>
+  <view class='title'>{{user_name}}</view>
+  <view class='fllow' ><view wx:if="{{focus_box}}" bindtap='focus_user' class='fllow_box_show'>+关注</view></view>
+
+  <view class='userinfo'>
+    <view>关注{{fllow_num}}</view>
+    <view>粉丝{{fans}}</view>
+  </view>
+</view>
+
+<view class="user_box bg-white radius shadow-warp">
+  <view class='user_box_color'>他的动态</view>
+  <view>共上传<view  class='user_box_color'>{{image_number}}</view>张</view>
+  <view>被下载<view  class='user_box_color'>{{down_num}}</view>次</view>
+</view>
+
+
+
+
+
+  <view class='img_box'>
+    <view style="height:0vh;overflow:hidden">
+      <view wx:for="{{images}}" wx:key="index">
+        <image  id="{{index}}" src="{{item.pic}}" data-item="1" bindload="loadimg" binderror="error" data-err-img="images[{{index}}].pic"  ></image>
+      </view>
+    </view>
+    <view style="width:vw;height:auto;padding-bottom:10rpx;">
+        <view class="img_item_left img_item">
+            
+            <view wx:for="{{oneimages}}" wx:key="index" >
+              <navigator url="../Picture_details/Picture_details?imageUrl={{item.url}}&category={{item.category}}&user_name={{item.user_name}}&user_image={{item.user_image}}&id={{item.user_id}}&created_at={{item.created_at}}&created_by={{item.created_by}}&content_num={{item.content_num}}&content={{item.content}}&img_height={{item.img_height}}&img_width={{item.img_width}}&Collection_quantity={{item.Collection_quantity}}&is_share=false&longitude={{item.longitude}}&latitude={{item.latitude}}" >
+                    <image bindtap='pp' class='image_box' lazy-load="{{true}}" src="{{item.url}}" data-item="1" style="width:100%;height:{{item.height}}px">
+                      <view class='imgmap' wx:if="{{item.imgshow}}">
+                        <image  class="gotu" src="../../images/icon/map1.png"></image>
+                      </view>
+                    </image>
+              </navigator>
+            </view>
+            <view wx:if="{{one}}" class='next_word' bindtap='next'>{{next_word}}</view>
+        </view>
+        <view class="img_item_middle img_item">
+            <view wx:for="{{twoimages}}" wx:key="index">
+                <navigator url="../Picture_details/Picture_details?imageUrl={{item.url}}&category={{item.category}}&user_name={{item.user_name}}&user_image={{item.user_image}}&id={{item.user_id}}&created_at={{item.created_at}}&created_by={{item.created_by}}&content_num={{item.content_num}}&content={{item.content}}&img_height={{item.img_height}}&img_width={{item.img_width}}&Collection_quantity={{item.Collection_quantity}}&is_share=false&longitude={{item.longitude}}&latitude={{item.latitude}}" >
+                    <image bindtap='pp' class='image_box' data-imageUrl="{{item.url}}"  lazy-load="{{true}}"  data-category='{{item.category}}'  data-user_name='{{item.user_name}}' data-user_image='{{item.user_image}}' data-id='{{item.user_id}}' src="{{item.url}}" style="width:100%;height:{{item.height}}px">
+                              <view class='imgmap' wx:if="{{item.imgshow}}">
+                                <image  class="gotu" src="../../images/icon/map1.png"></image>
+                              </view>
+                    </image>
+                </navigator> 
+            </view>   
+            <view wx:if="{{two}}" class='next_word' bindtap='next'>{{next_word}}</view>    
+        </view>
+        <view class="img_item_right img_item">
+            <view wx:for="{{threeimages}}" wx:key="index">
+                <navigator url="../Picture_details/Picture_details?imageUrl={{item.url}}&category={{item.category}}&user_name={{item.user_name}}&user_image={{item.user_image}}&id={{item.user_id}}&created_at={{item.created_at}}&created_by={{item.created_by}}&content_num={{item.content_num}}&content={{item.content}}&img_height={{item.img_height}}&img_width={{item.img_width}}&Collection_quantity={{item.Collection_quantity}}&is_share=false&longitude={{item.longitude}}&latitude={{item.latitude}}" >
+                    <image bindtap='pp' class='image_box' data-imageUrl="{{item.url}}"  lazy-load="{{true}}"  data-category='{{item.category}}'  data-user_name='{{item.user_name}}' data-user_image='{{item.user_image}}' data-id='{{item.user_id}}' src="{{item.url}}" style="width:100%;height:{{item.height}}px">
+                              <view class='imgmap' wx:if="{{item.imgshow}}">
+                                <image  class="gotu" src="../../images/icon/map1.png"></image>
+                              </view>
+                    </image>
+                </navigator> 
+            </view>
+             <view wx:if="{{three}}" class='next_word' bindtap='next'>{{next_word}}</view>
+        </view>
+        
+
+    </view>
+  </view>
+</scroll-view>

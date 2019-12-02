@@ -1,0 +1,4 @@
+/* pages/usingDocuments/usingDocuments.wxss */
+page{
+  background: #fff;
+}

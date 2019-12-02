@@ -1,0 +1,90 @@
+<!--pages/Function/Function.wxml-->
+<image src='../../images/index.jpg' class='image' mode="aspectFill"></image>
+<scroll-view scroll-y  class='scroll-y'>
+
+
+    <view class='box'>
+      <view style='width:42.5%;margin:5vh 5vw 0 5vw;'  bindtap='school_new'>
+        <view class='image_box'>
+        <image class='image_list'  mode='aspectFill' src='../../images/oo.png'></image>
+        <view class='text_box'>
+        <view class='text_title'>韶院消息</view>
+        <view class='introduct'>记录韶院大事件</view>      
+        </view>
+      </view>
+    </view>
+
+    <view style='width:42.5%;margin:5vh 5vw 0 0;'  bindtap='water_electric'>
+      <view class='image_box'>
+        <image class='image_list'  mode='aspectFill' src='../../images/oo.png'></image>
+        <view class='text_box'>
+        <view class="text_title">水电查询</view>
+        <view class='introduct'>韶院宿舍水电费查询</view>      
+        </view>  
+      </view>
+    </view> 
+  </view>
+
+  
+    <view class='box'>
+      <view style='width:42.5%;margin:5vh 5vw 0 5vw;'   bindtap='choose_song'>
+        <view class='image_box'>
+        <image class='image_list'  mode='aspectFill' src='../../images/oo.png'></image>
+        <view class='text_box'>
+        <view class='text_title'>校园广播点歌</view>
+        <view class='introduct'>学校每日广播点歌平台</view>      
+        </view>
+      </view>
+    </view>
+
+    <!-- <view style='width:42.5%;margin:5vh 5vw 0 0;'   bindtap="school_i">
+      <view class='image_box'>
+        <image class='image_list'  mode='aspectFill' src='../../images/oo.png'></image>
+        <view class='text_box'>
+        <view class="text_title">韶院简介</view>
+        <view class='introduct'>官方地介绍一下学校</view>      
+        </view>  
+      </view>
+    </view>  -->
+  </view>
+
+   
+<!-- 
+    <view class='box'>
+      <view style='width:42.5%;margin:5vh 5vw 0 5vw;'  bindtap='E_book'>
+        <view class='image_box'>
+        <image class='image_list'  mode='aspectFill' src='../../images/oo.png'></image>
+        <view class='text_box'>
+        <view class='text_title'>电子杂志</view>
+        <view class='introduct'>来自媒体的智慧</view>      
+        </view>
+      </view>
+    </view> 
+
+ 
+
+
+    
+  </view>
+  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+</scroll-view>
+
+

@@ -1,0 +1,137 @@
+<!--pages/Picture_details/Picture_details.wxml-->
+<!-- <import src="../../templates/image_detail/image_detail.wxml"/>
+<template is="image_detail" data="{{image}}"/> -->
+<!-- 胶囊 -->
+<canui-head-box></canui-head-box>
+
+<import src="../../templates/user_comments/user_comments.wxml"/>
+<import src="../../templates/user_card/user_card.wxml"/>
+
+
+ <block wx:for="{{image}}">
+  <image src="{{item.imageUrl}}" class='img_box' style='width:100vw;' bindtap="previewImage"  mode="widthFix"   data-src='{{item.imageUrl}}'>{{item}}
+    <image class='gotu' src='../../images/icon/map1.png' catchtap='map' wx:if="{{map}}"></image>
+    <view class='bottom' wx:if="{{button_style}}">
+      <view class='right_box' catchtap='shoucang'>
+      <button   plain="{{true}}"      style='border:0rpx solid #921616;'><image  class='bottom_box'  src="{{Collection_state? '../../images/icon/shoucang.png':'../../images/icon/shoucang1.png'}}"></image></button>
+      </view>
+
+      <view class='right_box' catchtap='aa'>
+        <button open-type="share"  plain="{{true}}" style='border:0rpx solid #921616;'><image  class='bottom_box'  src='../../images/icon/share_white.png' ></image></button>
+      </view>
+
+      <view class='right_box'  catchtap='navigateTo_index'>
+        <button  plain="{{true}}"  style='border:0rpx solid #921616;' ><image  class='bottom_box' src='../../images/icon/home_white.png' ></image></button>
+      </view>
+
+      <view class='right_box' catchtap='Down_Image'>
+        <button  plain="{{true}}"   style='border:0rpx solid #921616;' ><image  class='bottom_box' src='../../images/icon/down.png' ></image></button> 
+      </view>
+
+      <view class='right_box' catchtap='follow_word'>
+      <button  plain="{{true}}"   style='border:0rpx solid #921616;' ><image  class='bottom_box' src='../../images/icon/tianchongxing.png' ></image></button>  
+      </view>
+    </view>
+      
+  </image>
+   
+   
+ 
+   <!-- <view class='business_card'   wx:if="{{!is_qmt}}"  bindtap='person_info' hover-class="none"  data-user_id="{{created_by}}" data-user_name="{{item.user_name}}" data-user_image="{{user_image}}" >
+     <view class='user_info_img'><image  class='user_image1' src='{{user_image}}'></image></view>
+     <view class='user_info'>
+       <view class='user_info_name'> {{item.user_name}}</view>
+       <view class='user_info_time'>发布于 {{item.created_at}} </view>
+     </view>
+    <view class='person'><image class='right_img' src='../../images/icon/right.png' ></image></view>
+   </view> -->
+
+   <view wx:if="{{!is_qmt}}"  bindtap='person_info' hover-class="none"  data-user_id="{{options.created_by}}"  data-user_image="{{options.user_image}}" data-user_name="{{options.user_name}}" >
+    <template is="user_card" data="{{options}}"/>
+   </view>
+
+
+   <view class='author_detail'  wx:if="{{is_qmt}}">
+    <view class='user_name'>来自 {{item.user_name}}</view>
+    <view class='user_time'>发布于  {{item.created_at}}</view>
+    <view class='user_image_box'>
+      <image class='user_image' src='{{user_image}}' ></image>
+     <!-- <image  mode="widthFix" bindtap='shoucang'  src="{{Collection_state? '../../images/icon/shoucang.png':'../../images/icon/shoucang1.png'}}"  class='shoucangImage' ></image>
+     <view class='shoucang'>{{shoucang}}</view> -->
+    </view>
+  </view>
+
+
+  
+
+
+
+   <view class="image_card  bg-white ">
+    <view ><view class='title' style='width:35%;display:inline-block;'>图宽高</view><view class='font_color' style='width:60%;display:inline-block;'>{{img_width}}*{{img_height}}</view></view>
+        <view ><view class='title' style='width:35%;display:inline-block;'>图分类</view><view class='font_color' style='width:60%;display:inline-block;'>{{category }}</view></view>
+    <view ><view class='title' style='width:35%;display:inline-block;'>收藏数</view><view  class='font_color' style='width:60%;display:inline-block;'>{{Collection_quantity}}</view></view>
+    <view ><view class='title' style='width:35%;display:inline-block;'>评论数</view><view class='font_color' style='width:60%;display:inline-block;'>{{total_count}}</view></view>
+   </view>
+
+
+   
+
+
+
+
+  <view class='user_content bg-white'>
+    <view class='content_title'>图片介绍</view>
+    <view class='content_word'>{{content}}</view>
+   </view>
+
+ <view class='user_content'>
+    <template is="user_comments" data="{{user_word_list}}"/>
+      <view class='loding' bindtap="{{!Load_complete?'user_content':''}}">{{Tips}}</view>
+  </view>
+  
+
+ 
+
+
+  <button  hidden='{{!saveImgBtnHidden}}' open-type="openSetting" plain="{{true}}" bindtap='saveImgBtn' class='saveImgBtn' style='background:#921616;color:#ffffff;margin:0 auto;' >点击授权</button>
+
+
+    <view class='bottom2' wx:if="{{!button_style}}">
+      <view class='right_box' catchtap='shoucang'>
+      <button   plain="{{true}}"     style='border:0rpx solid #921616;'><image  class='bottom_box'  src="{{Collection_state? '../../images/icon/shoucang.png':'../../images/icon/shoucang1.png'}}"></image></button>
+      </view>
+
+      <view class='right_box' catchtap='aa'>
+        <button open-type="share"  plain="{{true}}" style='border:0rpx solid #921616;'><image  class='bottom_box'  src='../../images/icon/share_white.png' ></image></button>
+      </view>
+
+      <view class='right_box' catchtap='navigateTo_index'>
+        <button  plain="{{true}}"  style='border:0rpx solid #921616;' ><image  class='bottom_box' src='../../images/icon/home_white.png' ></image></button>
+      </view>
+
+      <view class='right_box'  catchtap='Down_Image'>
+        <button  plain="{{true}}"   style='border:0rpx solid #921616;'><image  class='bottom_box' src='../../images/icon/down.png' ></image></button> 
+      </view>
+
+      <view class='right_box' catchtap='follow_word'>
+      <button  plain="{{true}}"   style='border:0rpx solid #921616;' ><image  class='bottom_box' src='../../images/icon/tianchongxing.png' ></image></button>  
+      </view>
+    </view>
+ </block>
+
+<view  class="navigator-overlay-img"  hidden="{{background}}" bindtap="closePopup" catchtouchmove="preventTouchMove"> </view>
+
+ <view class='put' wx:if="{{bottom_box}}">
+    <textarea class='input_word'  number="500"   value="{{inputValue}}" cursor-spacing="30"  fixed="true"   auto-focus="true"   bindinput="bindKeyInput" placeholder="{{isMapShow?'对图片点评一下丫(^_^)':'想对他说什么吗？'}}"></textarea>
+    <view wx:if="{{!second_replay}}">
+      <view hidden="{{!isMapShow}}" class='input_button'  bindtap="{{!buttonClicked?'input':''}}">留言</view>
+      <view hidden="{{isMapShow}}" class='input_button'  bindtap="{{!buttonClicked?'input_Leaving_word':''}}">回复</view>
+    </view>
+    <view wx:if="{{second_replay}}">
+      <view hidden="{{isMapShow}}" class='input_button'  bindtap="{{!buttonClicked?'second_input_Leaving_word':''}}">回复</view>
+    </view>
+   
+
+  </view>
+
+

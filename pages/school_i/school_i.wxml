@@ -1,0 +1,4 @@
+<!--pages/school_i/school_i.wxml-->
+<import src="../../templates/school-introduction/school-introduction.wxml"/>
+
+  <template is="school-introduction" data="{{School_introduction}}"/>

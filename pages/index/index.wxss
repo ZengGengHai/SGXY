@@ -1,0 +1,453 @@
+/* @import '../../ui/style.wxss'; */
+page {
+  font-size: 32rpx;
+  width: 100vw;
+  height: auto;
+  background:#fff;
+}
+.image{
+  display:flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  position:relative; 
+}
+.Style_list{
+  width:100%;
+  height:75vh;  
+   /* background:red;   */
+  display:flex; 
+  flex-direction: column;
+  position:absolute;
+  left:0;
+  top:10vh;
+}
+
+
+.list{
+  height:14vh;
+  width:73vw;
+  margin:1.5vh auto;
+  /* margin:20rpx auto; */
+  padding:0;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2rpx 2rpx 9rpx #3b3a3a;
+  border-radius: 30rpx;
+
+}
+
+
+.list:nth-child(1){
+ 
+  /* animation:1.5s one 0.2s ease-in-out ;
+  animation-fill-mode:forwards; */
+  position:relative;
+  /* left:-100vw;
+   */
+  left:0rpx;
+  top:0;
+}
+/* @keyframes one{
+0% {
+
+}
+
+100%{
+left:0rpx;
+}
+}  */
+
+.list:nth-child(2) {
+ 
+  /* animation:1.6s two 0.25s ease-in-out ;
+  animation-fill-mode:forwards; */
+  position:relative;
+  /* left:100vw; */
+  left: 0rpx;
+  top:0;
+}
+/* @keyframes two{
+0% {
+}
+
+
+100%{
+left:0rpx;
+}
+}  */
+
+.list:nth-child(3){
+ 
+  /* animation:1.7s three 0.5s ease-in-out ;
+  animation-fill-mode:forwards; */
+  position:relative;
+  /* left:-100vw; */
+  left:0rpx;
+  top:0;
+}
+/* @keyframes three{
+0% {
+}
+
+100%{
+
+left:0rpx;
+}
+}  */
+
+.list:nth-child(4) {
+ 
+  /* animation:1.8s four 0.75s ease-in-out ;
+  animation-fill-mode:forwards; */
+
+  position:relative;
+  /* left:100vw; */
+  left:0rpx;
+  top:0;
+}
+/* @keyframes four{
+0% {
+
+}
+
+100%{
+left:0rpx;
+}
+}  */
+
+
+
+
+
+
+
+
+.list_image{
+  display:block;
+  width:55%;
+  height:14vh;
+  /* background:blue; */
+  border-radius: 15rpx 0 0 15rpx;
+}
+.list_text{
+   width:47%;
+   height: 14vh;
+   display:flex;
+   flex-direction: column;
+   background:#921616;
+   border-radius: 0 15rpx 15rpx 0;
+}
+
+.list_text .item_en_name{
+ display: block;
+ height: 13%;
+  margin-top:10%;
+  width:90%;
+  /* background: yellow; */
+  font-size: 10px;
+  text-align: right;
+  color:white;
+ 
+}
+.list_text .item_ch_name{
+  display: block;
+  height: 30%;
+  margin-top:2%;
+  width:90%;
+  font-size: 11px;
+  text-align: right;
+  color:white;
+}
+.list_text .item_next{
+  display: block;
+  height: 45%;
+  width:90%;
+  /* background: blue; */
+  position:relative;
+
+}
+.list_text .item_next .next_image{
+
+ background: #c91d1a;
+ 
+ /* background: #150d88; */
+width:13px;
+height:13px;
+padding: 5px;
+border-radius:50%;
+position:absolute;
+right:0;
+bottom:12px;
+
+transform:rotate(45deg);
+
+}
+
+
+.school_logo{
+  display: flex;
+  position:absolute;
+  bottom:1vh;
+  left:0;
+  width:100%;
+  height:80rpx;
+   /* background: red;  */
+   
+}
+
+.school_logo_image{
+  
+ 
+  width:220rpx;
+  height:60rpx;
+   /* background: blue;  */
+  margin:0 auto;
+}
+
+/* 底部声明 */
+.bottom_logo{
+   display: flex;
+  position:absolute;
+  bottom: 1vh;
+  left:78vw;
+  width:100%;
+  height:80rpx;
+   /* background: red;  */
+}
+.bottom_logo_image{
+   
+  width:130rpx;
+  height:45rpx;
+  margin-top:8rpx;
+ 
+}
+
+/* 灯笼 */
+.lantern_left{
+  position: absolute;
+  left:0rpx;
+  top:0rpx;
+}
+.lantern_right{
+  position: absolute;
+  right:0rpx;
+  top:0rpx;
+}
+.lantern{
+  width:35px;
+  height:120px;
+  padding:0 9px;
+}
+
+/*地图  */
+/* .image .map{
+ position:absolute;
+ top:9%;
+ left:55%;
+ margin-left:-60rpx;
+ width:120rpx;
+ height:120rpx;
+ background:#77098e;
+ border-radius:50%;  
+ animation:1.5s map 0s ease-in-out ;
+ animation-fill-mode:forwards;
+ color: #ffffff;
+ font-size: 20rpx;
+ font-weight: bold;
+ text-align: center;
+ line-height: 120rpx;
+ opacity: 0;
+}
+@keyframes map{
+0% {
+transform: scale(0.6,0.6);
+
+}
+80% {
+transform: scale(1.2,1.2);
+opacity:1;
+}
+
+100%{
+transform: scale(1,1);
+opacity: 1;
+}
+} 
+
+
+.image .home{
+ position:absolute;
+ top:24%;
+ left:33%;
+ margin-left:-60rpx;
+ width:120rpx;
+ height:120rpx;
+ background:#77098e;
+ border-radius:50%;  
+ animation:1.5s home 0.3s ease-in-out ;
+ animation-fill-mode:forwards;
+ color: #ffffff;
+ font-size: 20rpx;
+ font-weight: bold;
+ text-align: center;
+ line-height: 120rpx;
+ opacity: 0;
+}
+
+@keyframes home{
+0% {
+transform: scale(0.6,0.6);
+
+}
+80% {
+transform: scale(1.2,1.2);
+opacity: 1;
+}
+
+100%{
+transform: scale(1,1);
+opacity: 1;
+}
+} 
+
+.image .inquiry{
+ position:absolute;
+ top:28%;
+ left:70%;
+ margin-left:-60rpx;
+ width:120rpx;
+ height:120rpx;
+ background:#77098e;
+ border-radius:50%;  
+ animation:1.5s inquiry 0.7s ease-in-out ;
+ animation-fill-mode:forwards;
+ color: #ffffff;
+ font-size: 20rpx;
+ font-weight: bold;
+ text-align: center;
+ line-height: 120rpx;
+ opacity: 0;
+}
+@keyframes inquiry{
+0% {
+transform: scale(0.6,0.6);
+
+}
+80% {
+transform: scale(1.2,1.2);
+opacity: 1;
+}
+
+100%{
+transform: scale(1,1);
+opacity: 1;
+
+}
+}  */
+
+.scrollPage{
+  margin-top:26vh;
+  height:50vh;
+}
+
+.cu-card{
+  display: flex;
+  flex-wrap:wrap;
+
+}
+
+.cu-item{
+  margin:30rpx auto;
+  width:42%;
+
+  
+
+}
+
+.cardTitle{
+  color: #fff;
+  padding:13%;
+  font-size: 25rpx;
+  font-weight: 300;
+  transform: skew(-10deg, 0deg);
+  position: relative;
+  top:0;
+  text-shadow: 0px 0px 30rpx black;
+  opacity: 1;
+
+ 
+}
+.wbg{
+  content: "";
+  position: absolute;
+  width: 120rpx;
+  border-radius: 6rpx;
+  height: 40rpx;
+  background-color: #000;
+  display: block;
+  bottom: 37rpx;
+  left: 30rpx;
+  box-shadow: 0rpx 0rpx 12rpx #000;  
+ 
+  opacity:0.5;
+}
+.cardTitle::before{
+  content: "";
+  position: absolute;
+  width: 60rpx;
+  height: 6rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+  display: block;
+  top: 30rpx;
+  left:35rpx;  
+  transform: skew(10deg, 0deg);
+}
+/* .cardTitle::after{
+  content: "";
+  position: absolute;
+  width: 120rpx;
+  border-radius: 6rpx;
+  height: 40rpx;
+  background-color: #000;
+  display: block;
+  bottom: 35rpx;
+  left: 30rpx;  
+  transform: skew(10deg, 0deg);
+  opacity: 0.5;
+} */
+
+
+
+.feiji{
+  position:fixed;
+  top:8vh;
+  right:30rpx;
+  width:250rpx;
+  height:120rpx;
+  z-index:999;
+  /* animation:feiji 2s linear 2s infinite alternate; */
+  animation: feiji  10s   infinite ease-out;
+}
+
+@keyframes feiji
+{
+0%  {
+  right:-350rpx;
+  }
+100% {
+  right:110vw;
+  }
+}
+
+
+.qiqiu{
+  position:fixed;
+  bottom:110rpx;
+  right:120rpx;
+  width:50rpx;
+  height:100rpx;
+  z-index:999;
+}

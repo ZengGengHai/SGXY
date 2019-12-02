@@ -1,0 +1,79 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/usingDocuments/usingDocuments",
+    "pages/person/person",
+    "pages/School_Introduction/School_Introduction",
+    "pages/navigator/navigator",
+    "pages/search_place/search_place",
+    "pages/Picture_details/Picture_details",
+    "pages/Management_Backstage/Management_Backstage",
+    "pages/school_i/school_i",
+    "pages/school_new/school_new",
+    "pages/shoucang/shoucang",
+    "pages/publish/publish",
+    "pages/choose_song/choose_song",
+    "pages/cs/cs",
+    "pages/my_upload_img/my_upload_img",
+    "pages/upload_image/upload_image",
+    "pages/img_fllow/img_fllow",
+    "pages/img_person/img_person",
+    "pages/write/write",
+    "pages/my_release/my_release",
+    "pages/management_user_song/management_user_song",
+    "pages/The_electronic_magazine/The_electronic_magazine",
+    "pages/E_book/E_book",
+    "pages/Function/Function",
+    "pages/song_name_more/song_name_more",
+    "pages/check_image/check_image",
+    "pages/image/image",
+    "pages/head_portrait/head_portrait",
+    "pages/goToMap/goToMap",
+    "pages/draw_head_portrait/draw_head_portrait",
+    "pages/school_history/school_history",
+   "pages/inquiry_water_electric/inquiry_water_electric",
+    "pages/try/try",
+    "pages/qmt_manage/qmt_manage",
+    "pages/about/about",
+    "pages/check_picture_details/check_picture_details",
+    "pages/system_validation/system_validation",
+    "pages/place/place",
+    "pages/inquiry/inquiry",
+    "pages/aiministrator/aiministrator",
+    "pages/project/project",
+    "pages/chat/chat",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  },
+  "plugins": {
+    "sdkPlugin": {
+      "version": "2.0.9",
+      "provider": "wxc6b86e382a1e3294"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于地图导航"
+    }
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom",
+    "cuzgh-custom": "/colorui/componentstwo/cu-custom",
+    "canui-head-box": "/colorui/componentsthree/cu-custom",
+    "cul-custom": "/colorui/componentsfour/cu-custom",
+    "cuzc-custom": "/colorui/componentsfive/cu-custom"
+  }
+  
+}

@@ -1,0 +1,51 @@
+<!--pages/search_place/search_place.wxml-->
+<!-- class="{{item.hover? ' list_item_hover':'list_item'}} " -->
+<cul-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hSgmZBlbnOjzP5d.png" isBack="{{true}}">
+
+</cul-custom>
+
+<view style="top:{{CustomBar}}px;">
+   <view class='search_style' >
+      <block wx:for="{{school_list}}" wx:key>
+        <view class='school_box'>
+          <view class="school_name  {{item.hover? 'school_bottom_hover':'school_bottom'}} "  bindtap='chose_school'   data-id="{{item.id}}">{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+</view>
+
+   <view style='height:12vh; position:fixed;top:{{zghCustomBar}}px;width:100vw;'> 
+    <view class="section">
+    <image class='icon_search' src='../../images/icon/search.png'  bindtap="Bind_replaceInput" ></image>
+      <input placeholder="按照地点的关键字匹配搜索"  bindconfirm="bindReplaceInput"  focus="true" type="text" confirm-type="search" bindinput="Set_value"></input>
+    </view>
+  </view>
+
+<view  style="height:calc(88vh - {{zghCustomBar}}px);margin-top:{{zghCustomBar}}px;">
+
+    <scroll-view  scroll-y="true" style="height:calc(89vh - {{zghCustomBar}}px);margin-top:12vh;position:fixed;bottom:0;"   >
+      <block
+              wx:for="{{resultData}}" wx:key
+              >
+
+              <navigator id="{{ item.id }}" class="list-item"  hover-class='none'   url="../place/place?id={{item.id}}&num={{image_index}}&choose_id={{choose_id}}">
+                <view  class="{{index == activeMerchantIndex ? 'active-merchant-background' : ''}}"   style='width:100vw;height:160rpx;border-top:1rpx solid #eeeeee;border-bottom:1rpx solid #eeeeee;display:flex; flex-direction: row; box-sizing: content-box; white-space: nowrap;'>
+                  <view >
+                    <image  class='image_box shadow  radius shadow-blur bg-black bg-img' src="{{ item.image.length > 1 ? item.image[0]: item.image }}"></image> 
+                  </view>
+                  <view class='adress'>
+                    <view class='adress_name'>{{ item.title }}</view>
+                    <view class='detailed_adress'><image src='../../resources/location.png'  class='address_icon'></image>{{item.address}}</view>
+                  </view>
+                  <view catchtap='GoToMap' class='go_map'   data-list-id="{{ item.id }}" data-longitude="{{ item.longitude }}" data-latitude="{{ item.latitude}}" data-origin=" " >
+                  <image src='../../resources/next.png' style='display:block;width:35rpx;height:40rpx;margin: 6rpx 0 3rpx 28rpx;'></image>
+                  <view style='font-weight:bold;font-size:16rpx;margin:0 auto;color:white;width:100%;text-align:center;'>到这去</view>
+                  </view>
+                </view>
+              </navigator> 
+
+      </block> 
+   </scroll-view>
+ 
+
+</view>

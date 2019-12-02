@@ -1,0 +1,15 @@
+
+
+<template name='image_detail'>
+ <block wx:for="{{image}}">
+  <image src="{{item.imageUrl}}" style='width:100vw;' mode="widthFix">{{item}}</image>
+  <view class='author_detail'>
+    <view class='user_name'>来自 {{item.user_name}}</view>
+    <view class='user_time'>发布于  {{item.created_at}}</view>
+    <view class='user_image'>
+      <image class='user_image_box' src='{{item.user_image}}'></image>
+    </view>
+  
+  </view>
+ </block>
+</template>

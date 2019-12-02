@@ -1,0 +1,49 @@
+<!--pages/school_history/school_history.wxml-->
+<view class='box'> 
+    <view class='title'>喜迎韶院建校60周年华诞</view>
+     <swiper class="bannerPic" autoplay="true" interval="3000" indicator-dots="true">
+        <swiper-item wx:for="{{school_history}}"   wx:key="{{item.index}}">
+          <image src="{{item.url}}" class="bannerPic"  mode='aspectFill'></image>
+        </swiper-item>
+      </swiper>
+
+</view>
+
+<view class='word'  >二十世纪五十年代，国家工农生产迅速发展，社会需要大批建设人才，为此，广东省省委提出三级办校。在这样的大背景下，中共韶关地委组织部、宣传部于1958年7月18日，联合发文决定创办韶关师范专科学校，开创了粤北当代高等师范教育之先河。
+</view>
+<view class='word' style='padding:30rpx 0;'>在接下来的二十年岁月里，韶关师专几经搬迁，几历撤并，几易校名；但就是在如此艰苦、温饱不济的年代，老一代韶院人依旧孜孜不倦，呕心沥血，坚持办学。</view>
+
+<view class='time_box'>
+  <view class='box_content'  wx:for="{{history_list}}">
+  <view class='circle'></view>
+  <view class='time_title'>
+    <view class='time_title_year'>{{item.year}}</view>
+    <view class='time_title_title'>{{item.title}}</view>
+  </view>
+  <view class='year_box'>
+  {{item.content}}
+  </view>
+ </view>
+
+<view class='lantern'>  
+  <image class='lantern_image' src='../../images/lantern_left.gif'></image>
+  <view class='form'>
+  <view>信息整理:全媒体--张瑶</view>
+  <view>信息来源：韶关学院报</view>
+  </view>
+
+</view>
+</view>
+
+<view class="container" style=' border-bottom:1px solid #999999;'>
+ <canvas class='aa' style="width: 200px; height:105px;position:absolute;bottom:0px;left:50%;margin-left:-100px;" canvas-id="textA"
+  disable-scroll=true
+  bindtouchstart="bindtouchstart"
+  bindtouchmove="bindtouchmove"  
+  bindtouchend="bindtouchend"
+  bindtap="bindtap"
+  bindlongpress="bindlongpress"
+  ></canvas>
+  
+  
+</view>

@@ -1,0 +1,18 @@
+/* pages/project/project.wxss */
+.department{
+  width:650rpx;
+ 
+  background: pink;
+  margin:70px auto;
+  overflow:auto;
+  padding-top:40px;
+  padding-bottom: 30px;
+}
+.department .content{
+  width:550rpx;
+  height:650rpx;
+  background: white;
+  margin:0 auto;
+  box-shadow: 1px 3px 9px black;
+  
+}

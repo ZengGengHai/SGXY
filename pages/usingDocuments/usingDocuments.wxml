@@ -1,0 +1,27 @@
+<!--pages/usingDocuments/usingDocuments.wxml-->
+<cuzc-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hRIWkpU6Dnr1mkO.jpg" isBack="{{true}}"></cuzc-custom>
+<view class="cu-timeline" style='margin-top:60rpx;'>
+  <view class="cu-time" style="font-weight:blod;padding:5rpx;">使用手册</view>
+  <view class="cu-item cur ">
+    <view class="content bg-green shadow-blur">
+       开设“精彩壁纸”分类是为了能够让学生分享下载各类精美的图片，展现校园文化。
+    </view>
+  </view>
+  <view class="cu-item text-red ">
+    <view class="content bg-red shadow-blur">
+      正方教务系统验证是为了隔绝校外人使用上传类的功能，本小程序数据库不保留用户的账号密码，在功能类用途只调用到学号作为身份识别，同时为了营造健康的网络环境，上传图片携带学号信息，并人工审核，不可上传包含色情，违法的图片。如果发现这类图片我们有权把学号上报学校进行通报批评，新生暂时可能没有账号，进入学校后等待学院安排再注册。
+    </view>
+  </view>
+  <view class="cu-item text-grey ">
+    <view class="content bg-grey shadow-blur">
+       地图定位功能，如果有错误信息或者想增加收录地点，请及时在客服留言联系我们。我们目前只受理增加公共地点，不接收组织，部门，协会，店铺，创业基地小店以及盈利机构等位置定位服务。
+    </view>
+  </view>
+  <view class="cu-item text-blue">
+    <view class="bg-blue content">
+     韶院校园小助手由环创电脑工作室进行开发维护，由全媒体中心提供协助并拥有运营所有权。
+    </view>
+
+   
+  </view>
+</view>

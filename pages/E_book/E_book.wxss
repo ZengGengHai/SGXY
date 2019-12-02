@@ -1,0 +1,21 @@
+/* pages/E_book/E_book.wxss */
+.img{
+  width:100vw;
+  height:30vh;
+}
+.book_title{
+  padding: 20rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.chapter{
+  padding:10rpx 0 0 20rpx;
+  font-size: 30rpx;
+}
+.chapter view{
+ line-height: 50rpx;
+}
+.btn{
+  margin:40rpx 20rpx; 
+  box-shadow: 2rpx 3rpx 5rpx #eee;
+}

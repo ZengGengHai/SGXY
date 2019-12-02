@@ -1,0 +1,132 @@
+/* pages/school_new/school_new.wxss */
+
+/*
+  第二板块
+
+*/
+page{
+  background:#fff;
+}
+.new_content{
+  height:auto;
+  width:94vw;
+  margin:40rpx auto;
+  border-radius: 16rpx;
+  position:relative;
+  border: 0.1rpx solid #921616;
+  box-shadow: 2rpx 2rpx 5rpx rgb(117, 117, 117);
+  transition: 0.3s;
+
+}
+
+.new_content_show{
+  height:auto;
+ 
+  width:94vw;
+  margin:40rpx auto;
+  padding-bottom:30rpx;
+  border-radius: 8rpx;
+  position:relative;
+  border: 0.1rpx solid #921616;
+  box-shadow: 2rpx 2rpx 5rpx rgb(117, 117, 117);
+  transition: 0.3s;
+
+
+}
+.new_left{
+  position: absolute;
+  height:100%;
+  width:8rpx;
+  left:-1rpx;
+  top:-1rpx;
+  background: #921616;
+  border-radius: 8rpx 0 0 8rpx;
+  border: 0.1rpx solid #921616;
+}
+.new_right{
+  position: absolute;
+  right:-1rpx;
+  top:-1rpx;
+  height:100%;
+  width:8rpx;
+  background: #921616;
+  border-radius: 0  8rpx 8rpx 0;
+  border: 0.1rpx solid #921616;
+}
+.new_center{
+  margin-left:35rpx;
+  margin-bottom:75rpx;
+  text-align: justify;
+}
+.new_title{
+  height:auto;
+  font-size:30rpx;
+  color:#8d162a;
+  font-weight: bolder;
+  margin-top:16rpx;
+  margin-bottom:28rpx;
+  padding-right:20rpx;
+}
+.new_time{
+  font-size: 26rpx;
+  width:250rpx;
+  height:30rpx;
+  position: absolute;
+  left:35rpx;
+  bottom:22rpx;
+  /* background: red; */
+}
+.new_see{
+  display: flex;
+  flex-direction: row;
+  width:150rpx;
+  height: 30rpx;
+  position: absolute;
+  right:5rpx;
+  bottom:22rpx;
+  line-height:30rpx;
+}
+.new_eye{
+  width:35rpx;
+  margin-top:6rpx;
+}
+.new_counter{
+  padding-left:10rpx;
+  width:115rpx;
+  font-size:26rpx;
+}
+.new_content_Array{
+   padding-right:35rpx;
+   font-size: 28rpx;
+   /* text-indent: 20rpx; */
+   margin-top:2rpx;
+   text-indent: 2em;
+
+}
+.new_content_Array_show{
+  height:auto;
+  overflow: none;
+  transition: 0.3s; 
+}
+.new_content_Array_on{ 
+  overflow: hidden;
+  height:35rpx;
+  /* background: red; */
+  transition: 0.3s; 
+  
+}
+.new_content_Array_item{
+  line-height:50rpx;
+  padding-bottom:30rpx;
+  
+}
+.origin{
+  text-align: right;
+}
+.new_content_Array_item:nth-child(1){
+  margin-top:-6rpx;
+  
+}
+.new_content_Array_item:last-child{
+  padding-bottom:0rpx;
+}

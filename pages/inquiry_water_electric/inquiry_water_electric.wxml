@@ -1,0 +1,108 @@
+
+
+<!-- 胶囊 -->
+<canui-head-box style="z-index:666;"></canui-head-box>
+
+<image class='logo'  animation="{{animationData}}"  src="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1i3cr1AiWa2hwO2L.png"  mode="scaleToFill" bindtap='return_logo'>
+    <view class='water_electric' wx:if='{{exhibitData}}'>
+    <view class='water'>
+      <view  class='image'><image style='width:50rpx;height:50rpx;padding-top:8rpx;'   src='../../images/icon/water.png'></image></view>
+       <view class='name'>水费</view>
+      <view class='word'>{{water}}</view>
+    </view>
+    <view class='electric'>
+      <view  class='image'><image style='width:55rpx;height:55rpx;padding-top:8rpx;'  src='../../images/icon/lightning.png'></image></view>
+       <view class='name'>电费</view>
+      <view class='word'>{{electric}}</view>
+    </view>
+        <button class='submit' bindtap='return_logo'>返回查询</button>  
+    </view>
+    <view class='logo_image'><image style='height:60rpx;width:60rpx;' src='../../images/icon/logo.png'></image></view>
+    <image class='logo_left' src='https://cloud-minapp-13676.cloud.ifanrusercontent.com/1i3Xbk8CTpeyfbSI.png'></image>
+    <image class='logo_right'src='https://cloud-minapp-13676.cloud.ifanrusercontent.com/1i3XbiZdD6eES1j1.png'></image>
+</image>
+
+
+
+
+
+
+<!--水电查询表  -->
+<view class='inquiries'>
+<!--楼层  -->
+  <view class='buildnum'>
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">  
+        <view class="picker">  
+           <view  class='image'><image style='width:50rpx;height:50rpx;' src='../../images/icon/buildnum.png'></image></view> 
+           <view class='word_box'>
+          <view class='word'>{{multiArray[0][multiIndex[0]]}}-{{multiArray[2][multiIndex[2]]}}</view>
+            <view class='buttom_image'><image src='../../images/icon/buttom.png' style='width:40rpx;height:40rpx; padding-top:12rpx;' ></image></view>
+           </view> 
+        </view>  
+      </picker>  
+  </view>
+<!--门牌号  -->
+  <view class='roomno'>
+          <picker mode="multiSelector" bindchange="roomnum_MultiPickerChange" bindcolumnchange="roomnum_MultiPickerColumnChange" value="{{roomnoIndex}}" range="{{roomNumArray}}">  
+            <view class="picker">  
+                <view  class='image'><image style='width:50rpx;height:50rpx;' src='../../images/icon/door.png'></image></view> 
+             <view class='word_box'>
+                <view class='word'>{{roomno}}</view>
+                <view class='buttom_image'><image src='../../images/icon/buttom.png' style='width:40rpx;height:40rpx; padding-top:12rpx;' ></image></view>
+            </view>  
+           </view>  
+        </picker>
+  </view>
+
+   <button bindtap='identity' class='inquiries_buttom' >{{prompt}}</button> 
+</view>
+
+
+
+
+
+
+
+  <view class="container" style="border-bottom:1px solid #999999;z-index:-2;{{exhibitData?'display:none':'display:block;'}}   " >
+ <canvas class='aa' style="width: 200px; height:105px;position:absolute;bottom:0px;left:50%;margin-left:-100px;" canvas-id="textA"
+  disable-scroll=true
+  bindtouchstart="bindtouchstart"
+  bindtouchmove="bindtouchmove"  
+  bindtouchend="bindtouchend"
+  bindtap="bindtap"
+  bindlongpress="bindlongpress"
+  ></canvas>
+  
+  
+</view>
+
+
+<image class='balance' animation="{{animationDatabottom}}" src="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1i3cqzBcUqjOvlSC.png"  mode="scaleToFill">
+  <!-- <view class="balance_navbar">
+    <text wx:for="{{balanceNavbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view> -->
+
+
+  <!--水费-->
+  <view hidden="{{currentTab!==0}}">
+
+    <view class='content'>
+      <ec-canvas canvas-id="mychart_water" id="mychart_water" ec="{{ec_water}}" class="ec-canvas"> </ec-canvas>
+    </view>
+  </view>
+
+  <!--电费-->
+  <view hidden="{{currentTab!==1}}" >
+    <view class='content'>
+      <ec-canvas  canvas-id="mychart_electric" id="mychart_electric" ec="{{ec_electric}}" class="ec-canvas"> </ec-canvas>
+    </view>
+  </view>
+   <view class='logo_image2'><view style='height:60rpx;width:60rpx;' ></view></view>
+</image>
+
+ 
+  
+
+ 
+
+

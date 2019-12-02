@@ -1,0 +1,163 @@
+<!--pages/choose_song/choose_song.wxml-->
+<!-- 胶囊 -->
+<canui-head-box></canui-head-box>
+
+<import src="../../templates/user_comments/user_comments.wxml"/>
+
+<!-- <image class="img-bg" src='../../images/oo.png' mode='aspectFill'>
+     
+</image> -->
+<!-- <view class='box'>
+  <image class='logo' src='../../images/qmt.jpg' bindtap='show_box'></image>
+  <view class='title'>广播点歌中心</view>
+
+</view> -->
+  <view class="UCenter-bg">
+     <image class="userinfo-avatar" style='width:120rpx;height:120rpx;' src="../../images/qmt.jpg" background-size="cover"  mode="aspectFill"></image> 
+    <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+  </view>
+
+
+<view class='song_box'>
+  <image  class='bottom_box' src='../../images/song/Write.png' bindtap='show_box'></image>
+  <image  class='bottom_box_tow' src='../../images/song/A_shout.png' bindtap='showSongBox'></image>
+  <view class='song_box_row'>
+      <view style="width:60vw;">
+        <view class='list_title_box'>
+          <view class='list_title'>每日歌单</view>
+          <view class='list_more' bindtap='song_more'>more</view>
+        </view>
+        <view class='song_list' >
+          <block wx:for-items="{{song_List}}" wx:key="{{item.id}}">
+            <view class='song'>
+              <view class='kind-list-item'>
+              <view bindtap="see" data-id="{{item.song_id}}" class='song_title_box' > 
+                <view class='time' >{{item.song_time}}</view>
+                <image class="r_b_image {{item.open ? 'r_b_image_show' : ''}} " src='../../images/icon/right.png' ></image>        
+              </view> 
+                <view class="song_name_list {{item.open ? 'song_name_list-show' : ''}}"  bindtap="see">
+                  <block wx:for-items="{{item.song_name}}" wx:key="{{item.index}}">
+                    <view class='song_name'>{{item}}</view>
+                  </block>
+                </view>
+              </view> 
+            </view>
+          </block>
+        </view>
+      </view>
+      <view style="width:50vw;">
+        <view class='list_title_box'>
+          <view class='list_title_name'>今日精选留言用户</view>
+        </view>
+        <view class='user_info_list_box'>
+          <block wx:for-items="{{select_list}}" wx:key="{{index}}">
+            <image wx:if="{{item.select_show_box}}" class='user_info_list' src="{{item.user_img}}"></image>       
+          </block>
+        </view> 
+        <view>    
+        </view>
+      </view>
+  </view>
+
+  <view class='user_word_list'>
+    <view class='word_title_box'>
+      <view class='list_title' style='margin-top:30rpx;'>用户留言</view>
+    </view>
+  
+     <view class='user_song_name'>
+      <block  wx:for-items="{{user_word_list}}" wx:key="{{item.content_id}}">
+        <view class='user_box'>
+          <view class='img'><image src="{{item.user_img}}" ></image></view>
+          <view class='user_info_box'>
+          <view class="info_box">
+            <view class='info_name'>{{item.user_name}}
+             <view class='selected_today' wx:if="{{item.Selected}}">精选留言</view>
+            </view>
+            <view class='delete_box'>
+                  <image  class='shoucang'  wx:if="{{song_admin}}"   src="{{item.Selected?'../../images/icon/shoucang.png':'../../images/icon/shoucang1.png'}}" data-id="{{item.content_id}}" data-user_img="{{item.user_img}}" data-Selected="{{item.Selected}}"   bindtap="{{!buttonClicked?'shoucang':''}}" ></image>
+                  <image wx:if="{{item.is_me}}" class='delete' data-index="{{index}}" data-id="{{item.content_id}}" bindtap="{{!buttonClicked?'delete_content':''}}" src='../../images/song/Garbage.png'></image>
+                <image class='huifu' src="../../images/song/Comment.png" ></image>
+                <view   class='replay_num' >{{item.num}}</view>
+            </view>   
+          </view>
+            <view class='info_word' style=' text-align: justify;' data-id="{{item.content_id}}" data-created_by="{{item.created_by}}" data-replay_list="{{item.Replay_list}}" data-num="{{item.num}}" data-replay_limit="{{item.replay_limit}}"  data-replay_offset="{{item.replay_offset}}"  bindtap="getid">{{item.content}}</view>
+            <view class='time_delete_box'>
+                <view class='info_time'>{{item.content_time}}</view>
+        
+            </view>
+              <view class='replay' wx:if="{{item.show_box}}" data-id="{{item.content_id}}" data-replay_list="{{item.Replay_list}}" data-num="{{item.num}}" data-replay_limit="{{item.replay_limit}}"  data-replay_offset="{{item.replay_offset}}"   capture-bind:tap="onTap" >
+                <view>
+                  <block  wx:for-items="{{item.Replay_list}}" wx:key="{{item.content_id}}">
+                    <view class='Replay_user_box'>
+                      <view ><image src="{{item.user_img}}" class='Replay_img' ></image></view>
+                      <view class='Replay_user_info'>
+                        <view class=" Replay_info_name {{item.show_second_box?'Replay_info_name_right':''}} ">{{item.user_name}}{{item.show_second_box?' 回复  ':':'}}</view>
+                        <view class='second' wx:if="{{item.show_second_box}}">{{item.name}}</view>
+                        <view class='Replay_info_word' style=' text-align: justify;' data-user_name="{{item.user_name}}" data-created_by="{{item.created_by}}" bindtap='replay_second'>{{item.content}}</view>
+                        <view class='Replay_info_time'>{{item.content_time}}</view>
+                        <view class='Replay_time_delete_box'>                    
+                              <image wx:if="{{item.is_me}}" class='Replay_delete' data-index="{{index}}" data-id="{{item.content_id}}" bindtap="{{!buttonClicked?'delete_replay':''}}"   data-replay_id="{{item.replay_id}}"  src='../../images/song/Garbage.png'></image>
+                        </view>
+                      </view>
+                    </view>
+                  </block>
+                </view>
+                <view  class='replay_next radius bg-gradual-green' wx:if="{{item.replay_next}}" data-replay_limit="{{item.replay_limit}}" data-replay_offset="{{item.replay_offset}}" data-replay_next="{{item.replay_next}}" data-index="{{index}}" bindtap='replay_more' data-content_id="{{item.content_id}}" data-Replay_list="{{item.Replay_list}}">展开更多回复</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  
+  </view> 
+  <view class='loding' bindtap="{{!Load_complete?'user_content':''}}">{{Tips}}</view>
+
+  <view  class="navigator-overlay-img"  hidden="{{background}}" bindtap="closePopup" catchtouchmove="preventTouchMove"> </view>
+
+  <view class='put' wx:if="{{bottom_box}}" >
+    <textarea  class='input_word' number="500" value="{{inputValue}}" cursor-spacing="30" auto-focus="true"  fixed="true"  adjust-position="true" bindinput="bindKeyInput"  placeholder="{{isMapShow?'(^_^)写下你想听的歌曲:歌曲名➕歌手➕想说的话':'想对他说什么吗？'}}"></textarea>
+    
+    <view wx:if="{{!second_replay}}">
+
+      <form  bindsubmit="prompt" report-submit><button  formType="submit" hidden="{{!isMapShow}}" fixed="true" class='input_button  bg-gradual-green'  bindtap="{{!buttonClicked?'input':''}}">点歌</button></form>
+
+      <view hidden="{{isMapShow}}" class='input_button'  bindtap="{{!buttonClicked?'input_Leaving_word':''}}">回复</view>
+    </view>
+    <view wx:if="{{second_replay}}">
+      <view hidden="{{isMapShow}}" class='input_button'  bindtap="{{!buttonClicked?'second_input_Leaving_word':''}}">回复</view>
+    </view>
+  </view>
+
+
+
+  <view  class="navigator-overlay-img"  hidden="{{songBackground}}" bindtap="closeSongPopup" catchtouchmove="preventTouchMove"> </view>
+  <view class='choose_song_tip'  hidden="{{songBackground}}">
+    <view class='choose_song_tip_tilte'>
+       <image src='../../images/song/alendar.png' style='width:50rpx;height:50rpx; margin:0 auto;'></image>
+    </view>
+    <view class='choose_song_word' style="color:red;">
+    点歌功能将在下学期正式开发，目前进入测试阶段，同学们对此功能有任何建议都可以联系客服交流哦~ 
+    </view>
+    <view class='choose_song_word'>
+    点歌格式：歌曲名➕歌手➕想说的话(没有可不填)
+    </view>
+    <view class='choose_song_word'>
+    日文、韩文、现场版、电音、说唱类歌曲不支持播放
+    </view>
+    <view class='choose_song_word'>
+    我们会在当天的所有的点歌当中随机抽取部分歌曲进行播放 
+    </view>
+     <view class='choose_song_word'>
+    你的留言被精选的话，会发送消息推送，并且当日或者明天会在学校广播
+    </view>
+    
+  
+  </view>
+
+
+
+
+</view>
+
+
+

@@ -1,0 +1,5 @@
+<!--pages/write/write.wxml-->
+ <view class='put'>
+    <input class='input_word'  value="{{inputValue}}" bindinput="bindKeyInput" placeholder="对图片点评一下吧"></input>
+    <view class='input_button'  bindtap="{{!buttonClicked?'input':''}}" >评论</view>
+  </view>

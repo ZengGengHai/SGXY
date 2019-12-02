@@ -1,0 +1,7 @@
+<!--pages/project/project.wxml-->
+<view class='department'>
+  <view class='content'>
+    <view class='header'></view>
+  </view>
+
+</view>

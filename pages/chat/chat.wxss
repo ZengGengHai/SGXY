@@ -1,0 +1,14 @@
+/* pages/chat/chat.wxss */
+.container{
+ 
+ width:115px;
+ height:1px;
+ position: absolute;
+ bottom:80px;
+ left:50%;
+ margin-left:-55px;
+}
+
+.aa{
+  border-bottom: 1px solid black;
+}

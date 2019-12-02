@@ -1,0 +1,55 @@
+<cuzc-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1fuEBvRsKrFDKMCk.jpg" isBack="{{true}}"></cuzc-custom>
+
+<view class='box'>
+ <image src="{{img_url}}" class='img_box'  style="width:60vw;height:{{imgHeight}}px" bindload="img" mode="aspectFit"></image>
+</view>
+
+<!-- <view class='title'>图片介绍</view> -->
+<textarea placeholder="向大家介绍你的图片吧"  maxlength='160' bindinput="InputWord"   class="input_word"></textarea>
+<!-- <view class='title'>选择分类</view> -->
+<view  class="input_style">
+  <block wx:for-items="{{input_style}}">
+    <view class='style_box'  bindtap="chooseStyle" data-id="{{item.index}}" data-style="{{item.style}}" >
+      <view>{{item.style}}
+      </view>
+      <image  class='img' src="{{item.Selected?'../../images/icon/shoucang.png':'../../images/icon/shoucang1.png'}}"></image>
+    </view>
+  </block>
+</view>
+
+<!-- <view class='title'>记录图片位置</view> -->
+
+<view class="page-body">
+    <view class="page-section">
+      <view class="page-body-info">
+        <text class="page-body-text-small">当前位置信息</text>
+        <block wx:if="{{hasLocation === false}}">
+          <text class="page-body-text">未选择位置</text>
+        </block>
+        <block wx:if="{{hasLocation === true}}">
+          <!-- <text class="page-body-text">{{locationAddress}}</text> -->
+          <view class="page-body-text-location">
+            <text>E: {{longitude}}′</text>
+            <text>N: {{latitude}}′</text>
+          </view>
+        </block>
+      </view>
+      <view class="btn-area">
+        <button type="primary" bindtap="chooseLocation" class='choose_location'>选择位置</button>
+        <button bindtap="clear"   class='clear'>清空</button>
+      </view>
+    </view>
+  </view>
+
+  <view class='input_botton'>
+
+    <view class='input_box' bindtap="{{!buttonClicked? 'InputImg':''}}" >提交审核</view>
+  </view>
+
+
+
+
+
+
+
+

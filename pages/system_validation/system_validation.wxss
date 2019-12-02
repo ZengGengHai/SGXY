@@ -1,0 +1,114 @@
+/* pages/system_validation/system_validation.wxss */
+.title{
+  width:100vw;
+  padding-top:15vh;
+  /* background: red; */
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  padding-bottom:6vh;
+  color:#fff;
+  text-shadow: 6rpx 6rpx 15rpx #000;
+ 
+}
+.image{
+  display:flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  position:relative; 
+
+}
+.Style_list{
+
+  width:100%;
+  height:100vh;  
+   /* background:red;   */
+  display:flex; 
+  flex-direction: column;
+  position:absolute;
+  left:0;
+  top:0;
+
+}
+.box{
+  width:70vw;
+  /* background: red; */
+  margin:0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius:20rpx;
+  box-shadow: 6rpx 6rpx 20rpx  rgb(0, 0, 0);
+
+}
+
+.input_list{
+  height: 10vh; 
+  display: flex;
+  flex-direction: row;
+}
+.input_list:nth-child(1){
+  margin-top:4vh;
+  /* background: red; */
+}
+.input_list:nth-child(2){
+  margin-bottom:3vh;
+  /* background: red; */
+}
+
+
+.account_number,.password_number{
+  width:15%;
+  line-height: 10vh;
+  text-align: left;
+  margin-left:7.5%;
+  font-weight: bolder;
+  font-size: 24rpx;
+
+
+}
+.input_account_number,.input_password_number{
+  display: block;
+  width:60%;
+  height: 60rpx;
+  border:1rpx solid #160b13;
+  border-radius:10rpx;
+  margin:auto;
+  margin-right:7.5%;
+  padding-left:3%; 
+  font-size: 24rpx;
+}
+
+
+.login{
+
+  height:60rpx;
+  width:85%;
+  line-height:60rpx;
+  margin:0 auto;
+}
+.login_box{
+  width:100%;
+  line-height:60rpx;
+  font-size: 20rpx;
+}
+
+.tip{
+
+  width: 90vw;
+  font-size: 26rpx;
+  margin:0 auto;
+  line-height:50rpx;
+  text-align: justify;
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  bottom:5vh;
+  left:3vw;
+  padding:2%;
+  box-shadow: 4rpx 4rpx 15rpx  #000;
+}
+.tip_title{
+  font-weight: bold;
+  color:#0a16bb;
+  padding-bottom:3rpx;
+}

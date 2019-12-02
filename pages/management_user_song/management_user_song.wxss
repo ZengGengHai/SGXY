@@ -1,0 +1,13 @@
+/* pages/management_user_song/management_user_song.wxss */
+@import "../../templates/user_comments/user_comments.wxss";
+.loding{
+  width:50vw;
+  margin:170rpx auto 360rpx;
+  height: 40rpx;
+  /* border: 1px solid red; */
+  line-height: 40rpx;
+  text-align: center;
+  /* box-shadow: 1rpx 1rpx 20rpx #ee4a4a; */
+  border-radius: 10rpx;
+  font-size: 26rpx;
+}

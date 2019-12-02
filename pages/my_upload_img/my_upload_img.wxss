@@ -1,0 +1,152 @@
+/* pages/my_upload_img/my_upload_img.wxss */
+page{
+  background: #eee;
+}
+/* .barcground_img{
+  width:100vw;
+  height: 100vh;
+  z-index: -4;
+  position: fixed;
+  top:0;
+  left:0;
+} */
+.box{
+  width:60vw;
+  margin:5vh auto 3vh;
+}
+.img_box{
+  display: block;
+  margin:0 auto;
+  box-shadow: 2rpx 3rpx 16rpx rgb(128, 127, 127);
+
+}
+
+
+.input_word{
+  width: 100vw;
+  height: 200rpx;
+  box-shadow: 2rpx 3rpx 16rpx rgb(128, 127, 127);
+  font-size:26rpx;
+  margin-top:10rpx;
+  line-height: 55rpx;
+  padding:2.5vw;
+  background: #fff;
+}
+.title{
+  font-size:28rpx;
+  margin:0rpx 5rpx 10rpx;
+}
+.input_style{
+   width: 100vw;
+  height: auto;
+  box-shadow: 2rpx 3rpx 16rpx rgb(128, 127, 127);
+  font-size:26rpx;
+  margin-top:10rpx;
+  line-height: 55rpx;
+  padding:2.5vw;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-around; 
+  background: #fff;
+}
+.style_box{
+  width:190rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin:15rpx 40rpx;
+  /* background: #921616; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+.img{
+  width:35rpx;
+  height:35rpx;
+  padding:2rpx;
+  background: #921616;
+  border-radius: 50%;
+  margin-top:7rpx;
+}
+
+.page-body {
+  width:100%;
+  flex-grow:1;
+  overflow-x:hidden;
+  box-shadow: 2rpx 3rpx 16rpx rgb(128, 127, 127);
+  margin-top:10rpx;
+  
+}
+.page-section{
+  margin-bottom:0;
+  box-shadow: 2rpx 3rpx 16rpx rgb(128, 127, 127);
+  background: #fff;
+
+}
+
+.page-body-text-small{
+  font-size:24rpx;
+  color:#000;
+  margin-bottom:20rpx
+}
+.page-body-info{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background-color:#fff;
+  width:100%;
+  padding:50rpx 0 110rpx 0;
+  height:100rpx;
+}
+.page-body-text{
+  font-size:30rpx;
+  line-height:26px;
+  color:#ccc;
+  margin-bottom: 10rpx;
+
+}
+.btn-area{
+  display: flex;
+  flex-direction: row;
+  width:60vw;
+  margin:0 auto;
+}
+.choose_location,.clear{
+  width:170rpx;
+  height:40rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  margin-bottom: 30rpx;
+}
+
+
+.page-body-text{
+  width:100vw;
+  text-align: center;
+  height:60rpx;
+
+}
+.page-body-text-location{
+  font-size: 25rpx;
+  margin-bottom: 60rpx;
+}
+.input_botton{
+  width:100vw;
+  height:220rpx;
+  margin-top:10rpx;
+  background: #fff;
+  padding-top:80rpx;
+}
+
+.input_box{
+  width:60vw;
+  height:60rpx;
+  background: #921616;
+  color:#fff;
+  margin:0 auto;
+  text-align: center;
+  border-radius: 10rpx;
+  line-height: 60rpx;
+  font-size:28rpx;
+
+}

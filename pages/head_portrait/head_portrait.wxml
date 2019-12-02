@@ -1,0 +1,65 @@
+<view class='bbb'> 
+
+<image class='bg'  src="../../images/index.jpg" mode="aspectFill"  style='z-index:0'></image>
+<!--pages/head_portrait/head_portrait.wxml-->
+<!-- <scroll-view scroll-y="true" style='height:100vh;width:100vw;'> -->
+<view style='padding-top:20px;width:100vw;clear:both'>
+
+
+  <view  class='head_portrait'  >  
+  <view class='left'></view>
+  <view class='right'></view> 
+   
+     <cover-image class='user_image'  src="{{user_image}}"  ></cover-image>
+    <cover-image class="bgPic"  src="{{choose}}" ></cover-image>
+  </view>
+  <button open-type="getUserInfo" class='btn_buttom'  bindgetuserinfo="userInfoHandler">1.授权获取头像</button>
+
+
+  <scroll-view scroll-x="true" style='white-space: nowrap;display:flex;width:100vw;' class='image_list'>
+  
+  
+    <view class='image_box'  wx:for="{{image_list}}"  bindtap='choose_image'> 
+     <view class="head_image" ><image  src="{{item.src}}" style='width:80px;height:80px;'  data-id='{{item.id}}' ></image></view>
+     <view class='name'>{{item.name}}</view>
+    </view>
+    
+   </scroll-view>
+
+  <button class='make' bindtap='Make'>2.点击绘制头像</button>
+  <button bindtap="savePic" class='save'>3.保存到手机相册</button>
+<view style='margin:40px 0;'>
+  <canvas  class="myCanvas" canvas-id="myCanvas" ></canvas>
+</view>
+
+
+
+
+<view class="container" style=' border-bottom:1px solid #999999;'>
+ <canvas class='aa' style="width: 200px; height:105px;position:absolute;bottom:0px;left:50%;margin-left:-100px;" canvas-id="textA"
+  disable-scroll=true
+  bindtouchstart="bindtouchstart"
+  bindtouchmove="bindtouchmove"  
+  bindtouchend="bindtouchend"
+  bindtap="bindtap"
+  bindlongpress="bindlongpress"
+  ></canvas>
+  
+  
+</view>
+
+</view>
+
+
+
+
+
+
+<!-- </scroll-view> -->
+
+
+</view>
+
+
+
+

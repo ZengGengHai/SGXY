@@ -1,0 +1,24 @@
+<view class="inquiry_water_electric" bindtap='inquiry_water_electric'>
+  <view class='inquiry_name'>水电查询</view>
+
+</view>
+<view class="inquiry_water_electric" >
+  <view class='inquiry_name'>成绩查询</view>
+
+</view>
+
+
+
+<view class="inquiry_water_electric" >
+  <view class='inquiry_name'>快件查询</view>
+
+</view>
+
+
+<view class="inquiry_water_electric" >
+  <view class='inquiry_name'>其他查询</view>
+
+</view>
+
+
+

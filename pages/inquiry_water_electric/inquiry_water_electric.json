@@ -1,0 +1,12 @@
+{
+
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#921616",
+    "navigationBarTitleText": "韶院水电查询",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+      "ec-canvas": "../../utils/ec-canvas/ec-canvas"
+    },
+    "disableScroll": true
+
+}

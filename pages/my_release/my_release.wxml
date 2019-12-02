@@ -1,0 +1,28 @@
+<!--pages/my_release/my_release.wxml-->
+
+
+<!-- 胶囊 -->
+<canui-head-box ></canui-head-box>
+
+<image src='../../images/index.jpg' class='image' mode="aspectFill"></image>
+<scroll-view scroll-y  class='scroll-y'>
+    <!-- <view class='box' bindtap="">   
+        <view class='text_title'>图片墙管理</view>
+        <view class='line'></view>
+        <view class='pic_introduct'>
+          <view bindtap="publish" >我的发布</view>
+          <view bindtap='shoucang'>我的收藏</view>
+          <view bindtap='my_focus'>我的关注</view>
+          <view>查看排名</view>
+        </view>       
+    </view> -->
+
+    <view class='box' >   
+        <view class='text_title'>点歌功能</view>
+        <view class='line'></view>
+        <view class='introduct' bindtap="song">管理留言</view>       
+    </view>
+
+
+
+</scroll-view>

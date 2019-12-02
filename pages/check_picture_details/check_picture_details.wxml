@@ -1,0 +1,27 @@
+<!--pages/Picture_details/Picture_details.wxml-->
+<!-- <import src="../../templates/image_detail/image_detail.wxml"/>
+<template is="image_detail" data="{{image}}"/> -->
+
+
+ <block wx:for="{{image}}">
+  <image src="{{item.imageUrl}}" class='image'  bindtap="previewImage"  mode="widthFix"   data-src='{{item.imageUrl}}'>{{item}}</image>
+  <view class='author_detail'>
+    <view class='user_name'>来自 {{item.user_name}}</view>
+    <view class='user_Student_ID'>学号:{{item.Student_ID}}</view>
+    <view class='user_time'>发布于  {{item.created_at}}</view>
+    <view class='cut_or_add'  >{{cut_or_add}}</view>
+    <view class='user_image_box'>
+      <image class='user_image' src='{{item.user_image}}' ></image>
+    </view>
+    
+  </view>
+  <button  hidden='{{!saveImgBtnHidden}}' open-type="openSetting" plain="{{true}}" bindtap='saveImgBtn' class='saveImgBtn' style='background:#921616;color:#ffffff;' >点击授权</button>
+
+  <view class='bottom'>
+   <button open-type="share" bindtap='aa' plain="{{true}}" style='border:0rpx solid #921616;'><image  class='bottom_left'  src='../../images/icon/share_white.png' ></image></button>
+    <button  plain="{{true}}" style='border:0rpx solid #921616;' bindtap='Cut_Down_Image'><image  class='bottom_right' src='../../images/icon/delete_image.png' ></image></button>
+    <button  plain="{{true}}"  style='border:0rpx solid #921616;' bindtap='Add_Image'><image  class='bottom_right' src='../../images/icon/add_image.png' ></image></button>
+    
+    
+  </view>
+ </block>

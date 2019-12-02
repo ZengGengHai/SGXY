@@ -1,0 +1,93 @@
+/* pages/Picture_details/Picture_details.wxss */
+/* @import "../../templates/image_detail/image_detail.wxss"; */
+
+
+.author_detail{
+  width:100vw;
+/* background: red; */
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+}
+.image{
+  width:100vw;
+  box-shadow:1rpx 1rpx 4rpx rgb(75, 75, 75);
+  background:rgb(202, 201, 201);
+}
+
+.user_name{
+
+  padding:100rpx 0 0rpx 0;
+  font-size: 28rpx;
+  text-align: center;
+  color: black;
+  /* background: yellow; */
+  font-weight: bold;
+
+}
+.user_time{
+  padding:20rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color:rgb(160, 158, 158);
+}
+.cut_or_add{
+  padding-bottom:10rpx;
+  font-size: 26rpx;
+  text-align: center;
+  color:#921616;
+  font-weight: bold;
+  
+}
+.user_Student_ID{
+  padding-top:20rpx;
+  font-size: 28rpx;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  
+}
+.user_image_box{
+  width:150rpx;
+  height:150rpx;
+  margin:0 auto;
+  padding:25rpx 0 220rpx 0;
+}
+.user_image{
+  display: block;
+ width:110rpx;
+ height:110rpx;
+ border-radius:50%;
+ border:1rpx solid #000;
+ margin:0 auto;
+}
+
+.bottom{
+  width:100vw;
+  height:100rpx;
+  background: #921616;
+  position: fixed;
+  bottom:0;
+  left:0;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+ 
+}
+.bottom_left,.bottom_center,.bottom_right{
+  width:40rpx;
+  height:40rpx;
+  /* background: yellow; */
+  padding-top:25rpx;
+}
+.saveImgBtn{
+  width:300rpx;
+  height:60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-bottom: 180rpx;
+  font-size: 26rpx;
+  border-radius: 10rpx;
+  background: #921616;
+  border:0;
+}

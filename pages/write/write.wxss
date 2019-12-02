@@ -1,0 +1,3 @@
+/* pages/write/write.wxss */
+
+@import "../choose_song/choose_song.wxss";

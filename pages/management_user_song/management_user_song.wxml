@@ -1,0 +1,7 @@
+<!--pages/management_user_song/management_user_song.wxml-->
+<cuzc-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hRIWkpU6Dnr1mkO.jpg" isBack="{{true}}"></cuzc-custom>
+<import src="../../templates/user_comments/user_comments.wxml"/>
+<view style='margin-top:40rpx;'>
+  <template class="top" is="user_comments" data="{{user_word_list}}"/>
+</view>
+<view class='loding' bindtap="{{!Load_complete?'user_content':''}}">{{Tips}}</view>

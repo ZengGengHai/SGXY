@@ -1,0 +1,27 @@
+
+<cuzc-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hRIWrnpk573Fs8c.jpg" isBack="{{true}}">
+</cuzc-custom>
+
+<scroll-view   scroll-y  scroll-with-animation="{{true}}"  bindscrolltolower="lower"  style='height:100vh;'   >
+                    <block wx:for="{{NewsArray}}"  wx:key="{{item.new_id}}"  >
+                    <view  class=" {{item.new_open ? 'new_content_show' : 'new_content'}}" bindtap='News'  data-id="{{item.new_id}}" data-new_counter="{{item.new_counter}}" data-open="{{item.new_open}}"  data-seen="{{item.new_seen}}" >
+                      <view class='new_left'></view>
+                      <view class='new_center'>
+                        <view class='new_title'>{{item.new_title}}</view>
+                        <view class="new_content_Array {{item.new_open ? 'new_content_Array_show' : 'new_content_Array_on'}}">
+                          <block wx:for="{{item.new_content}}"  wx:key="{{item.new_content.index}}">
+                          <view  class="new_content_Array_item">{{item}}</view>
+                          </block>
+                        <view class='origin'>――信息来源:{{item.new_origin}}</view>
+                        </view>
+                          <view class="new_time">{{item.new_time}}</view> 
+                          <view class='new_see'>  
+                            <image class='new_eye' src="{{item.new_seen? '../../images/icon/eye.png':'../../images/icon/eye1.png'}}" style='height:20rpx;width:30rpx;display:block;margin-left:20rpx;' ></image>
+                            <view class="new_counter">{{item.new_counter}}</view>
+                          </view>  
+                      </view>              
+                      <view class='new_right'></view>                           
+                    </view> 
+                   </block> 
+                  <view bindtap='lower' style='width:100%;height:60rpx;line-height:60rpx;text-align:center;font-size:24rpx;margin-top:10rpx;margin-bottom:10rpx;'>-----{{prompt}}-----</view>
+</scroll-view> 

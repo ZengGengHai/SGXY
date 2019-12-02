@@ -1,0 +1,10 @@
+<!--pages/img_fllow/img_fllow.wxml-->
+<!-- 胶囊 -->
+<cuzc-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1hRIWkpU6Dnr1mkO.jpg" isBack="{{true}}"></cuzc-custom>
+
+<import src="../../templates/user_card/user_card.wxml"/>
+
+  <view class='bottom'>
+    <template is="user_fllow_card" data="{{options}}"/>
+  
+  </view>

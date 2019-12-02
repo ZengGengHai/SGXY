@@ -1,0 +1,263 @@
+
+@import "../../templates/school-association/school-association.wxss";
+@import '../../resources/iconfont.wxss';
+@import "../../templates/user_card/user_card.wxss";
+
+page {
+  background-color: #f8f8f8;
+  font-size: 16px;
+  position:fixed;
+}
+
+
+ page, .page, .page_tab{
+  width:100vw;
+  position: fixed;
+    
+}
+.page__bd {
+  padding-bottom: 0;
+}
+
+.school-navbar {
+  width:100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 5vh;
+  padding-top:1rpx;
+  padding-bottom:3rpx;
+  position: fixed;
+  z-index:99999;
+  top: 0px;
+}  
+
+.school-navbar__item {
+  position: relative;
+  display: block;
+  flex: 1;     
+  text-align: center;
+  font-size: 25rpx;
+  color:#CCCCCC;
+  z-index:9999;
+} 
+.school-navbar__item.school-bar__item_on {
+  color: white;
+  z-index:9999;
+} 
+.school-navbar__slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 12rpx;
+  width: 6em;
+  height: 6rpx;
+  background-color: white;
+  transition: transform .3s;
+  z-index:9999;
+}
+.school-navbar__title {
+  display: inline-block;
+  font-size: 28rpx;
+  max-width: 8em;
+  width: 6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  z-index:9999;
+}
+
+
+
+
+
+
+
+/*
+第三板块
+
+
+*/
+
+
+
+.upload{
+
+  margin:0 auto;
+  width:55rpx;
+  background: #921616;
+  height: 50rpx;
+  position:fixed;
+  bottom:60rpx;
+  left:45rpx;
+  z-index:999;
+  display: flex;
+  flex-direction: row;
+  padding:0rpx 5rpx 5rpx 5rpx;
+  border-radius:50%;
+  
+ 
+
+}
+.upload_image{
+  width:40rpx;
+  height:40rpx;
+  border-radius:50%;
+  padding:7rpx;
+  z-index:999;
+
+}
+.image_classify_click{
+
+  margin:0 auto;
+  width:170rpx;
+  background: #921616;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-radius:15rpx;
+  position:fixed;
+  bottom:60rpx;
+  right:45rpx;
+  z-index:999;
+  text-align: center;
+  font-size: 26rpx;
+  color:#CCCCCC;
+  display: flex;
+  flex-direction: row;
+  padding-right:10rpx;
+}
+
+/* 图片分类列表 */
+.image_classify{   
+  width:180rpx;
+  height:587rpx;
+  display:flex;
+  position:fixed;
+  bottom:50rpx;
+  right:32rpx;
+  flex-direction: column;
+  margin-top:20rpx;
+  z-index:880;
+
+
+}
+
+.image_classify_list{    
+  height:75rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color:#CCCCCC;
+}
+.font_color{
+  color:#fff;
+  font-weight: bold;
+}
+.image_classify_list_name{
+  margin:0 auto;
+  width:150rpx;
+  background: #921616;
+  height: 55rpx;
+  line-height: 55rpx;
+  border-radius:15rpx;
+  opacity:1;
+}
+
+
+/* 图片墙部分 */
+
+.box{                     
+  padding:10rpx 0 0 0rpx;
+  width:100%;
+  margin:0rpx;
+  border: 0;
+}
+.img_item{
+    display: inline-block;
+    vertical-align: top;  
+}
+.img_item_left{
+     width: 46.25%; 
+     margin-left:2.5%;
+     margin-right:1.25%;       
+}
+.img_item_right{
+    width: 46.25%; 
+    margin-left:1.55%;
+    margin-right:2.0%;   
+}
+.img_item image{
+    box-shadow: 3.5rpx 3.5rpx 5px #292929;  
+    position: relative;
+    margin:3% 0 0rpx 0;  
+}
+.image_box{
+  border:0rpx solid black;
+  position: relative;
+}
+
+.margin_bottom{
+  position: absolute;
+  bottom: 3rpx;
+  font-size: 16rpx;
+  color:#FFF;
+  line-height: 20rpx;
+  padding:15rpx;
+  width:70%;  
+}
+.user_box{
+  display: flex;
+  flex-direction: row;
+}
+.user_box_name{
+  line-height: 27rpx;
+  padding-left:5rpx;
+}
+.user_box_img_wh{
+  width:25rpx;
+  height:25rpx;
+  border-radius: 50%;
+}
+
+.imgmap{
+  position: absolute;
+  width: 45rpx;
+  height: 45rpx;
+  bottom: 8rpx;
+  right:11rpx;
+  font-size: 16rpx;
+  line-height: 20rpx;
+  border-radius: 50%;
+  box-shadow:none;
+}
+
+.gotu{
+  width:35rpx;
+  height:35rpx;
+  padding:5rpx;
+  box-shadow:none;
+  border-radius: 50%;
+  background: #921616;
+
+}
+
+.next_word{
+  width:100%;
+  height:40rpx;
+  font-size:24rpx;
+  text-align: center;
+  margin:60rpx 0;
+}
+
+
+
+
+.bottom{
+  margin-top:5rpx;
+}
+.user_list{
+  width: 40vw;
+  margin:90rpx auto 110rpx;
+  font-size: 24rpx;
+  text-align: center;
+}

@@ -1,0 +1,34 @@
+.author_detail{
+  width:100vw;
+/* background: red; */
+  display: flex;
+  flex-direction: column;
+  margin:0 auto;
+}
+.user_name{
+
+  padding:100rpx 0 5rpx 0;
+  font-size: 35rpx;
+  text-align: center;
+  color: black;
+  /* background: yellow; */
+
+}
+.user_time{
+  padding:20rpx;
+  font-size: 30rpx;
+  text-align: center;
+  color:rgb(160, 158, 158);
+}
+.user_image{
+  width:150rpx;
+  margin:0 auto;
+  padding:5rpx 0 100rpx 0;
+}
+.user_image_box{
+ width:130rpx;
+ height:130rpx;
+ border-radius:50%;
+ border:1rpx solid #000;
+
+}

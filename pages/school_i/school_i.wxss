@@ -1,0 +1,2 @@
+/* pages/school_i/school_i.wxss */
+@import "../../templates/school-introduction/school-introduction.wxss";

@@ -1,0 +1,155 @@
+
+ <cul-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1fuEBvRsKrFDKMCk.jpg" isBack="{{true}}">
+</cul-custom>
+<import src="../../templates/school-association/school-association.wxml"/>
+     <view class="school-navbar" style="top:{{CustomBar}}px;">
+            <block wx:for="{{tabs}}" wx:key="{{index}}">
+              <view id="{{index}}" class="school-navbar__item  {{activeIndex == index ? 'school-bar__item_on' : ''}}" bindtap="tabClick">
+                <view class="school-navbar__title">{{item}}</view>
+              </view>
+            </block>
+            <view class="school-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>            
+      </view>
+
+<view class='page'   style="height:calc(100vh - {{zghCustomBar}}px);top:{{zghCustomBar}}px;" >
+  <view class="page__bd">
+    <view class='page_tab'>
+      <view class='school-tab_panel'   >
+        <swiper current="{{activeIndex}}"   class="school__panel"  style="height:calc(100vh - {{zghCustomBar}}px);width:100vw;"  bindchange='currentTab'>
+          <swiper-item  style="height:calc(100vh - {{zghCustomBar}}px);width:100vw;"    >
+            
+               
+              <view class="image_classify_click " style="z-index:999;" >
+                <view style='width:90%;z-index:999;'  bindtap="image_classify_open">分类筛选</view>
+                <view style='font-size:20rpx;margin-left:-10rpx;' class="iconfont {{image_classify_open ? 'icon-spread-down':'icon-spread-up'}}"></view>
+              </view>
+              <view class=" image_classify  "  hidden="{{!image_classify_open}}"    >
+                <block wx:for="{{image_classify_list}}" wx:key="{{item.index}}" >
+                  <view class='image_classify_list'><view  class="image_classify_list_name  {{item.hover? 'font_color':''}}"  bindtap="Image_Classify" data-hover="{{item.hover}}" data-seen="{{item.seen}}"  data-category='{{item.name}}'>{{item.name}}</view></view>
+                </block>
+              </view>
+            <scroll-view scroll-y   style="height:calc(100vh - {{zghCustomBar}}px);"  scroll-top="{{scroll_top}}" bindscrolltolower="image_lower" >
+             <view class='box'>
+              <cover-view class='upload' bindtap='upload_image'  style="z-index:889;"  ><cover-image src='../../images/icon/upload.png' class='upload_image'></cover-image></cover-view>
+              <!-- <view class='upload' bindtap='upload_image'  style="z-index:889;"  >  <text class="cuIcon-pullup upload_image lg text-gray"></text></view> -->
+              
+              <view style="height: 94vh;">
+                <view wx:for="{{images}}" wx:key="index">
+                
+                  <image   id="{{index}}" src="{{item.pic}}"  data-item="{{index}}" bindload="loadimg"  binderror="error" data-err-img="images[{{index}}].pic" ></image>
+                </view>
+              </view>
+              <view style="width:100%;height:auto">
+                  <view class="img_item_left img_item">
+                      <view wx:for="{{oneimages}}" wx:key="index" >
+                        <navigator url="../Picture_details/Picture_details?imageUrl={{item.url}}&category={{item.category}}&user_name={{item.user_name}}&user_image={{item.user_image}}&id={{item.user_id}}&created_at={{item.created_at}}&created_by={{item.created_by}}&content_num={{item.content_num}}&content={{item.content}}&img_height={{item.img_height}}&img_width={{item.img_width}}&Collection_quantity={{item.Collection_quantity}}&is_share=false&longitude={{item.longitude}}&latitude={{item.latitude}}" >
+                             <image binderror="error" bindtap='pp' class='image_box' lazy-load="{{true}}" src="{{item.url}}" data-item="1" style="width:100%;height:{{item.height}}px">
+                              <view class="margin_bottom">
+                                <view class='user_box'>
+                                  <view class='user_box_img'><image src="{{item.user_image}}" class="user_box_img_wh"></image></view>
+                                  <view class='user_box_name'>{{item.user_name}}</view>
+                                </view>
+                                <view >{{item.content}}</view>
+                              </view>
+                              <view class='imgmap'   wx:if="{{item.imgshow}}">
+                                <image  class="gotu" src="../../images/icon/map1.png"></image>
+                              </view>
+
+                             </image>
+                        </navigator>
+                      </view>
+                      <view wx:if="{{one}}" class='next_word' bindtap='next'>{{next_word}}</view>
+                  </view>
+                  <view class="img_item_right img_item">
+                      <view wx:for="{{twoimages}}" wx:key="index">
+                          <navigator url="../Picture_details/Picture_details?imageUrl={{item.url}}&category={{item.category}}&user_name={{item.user_name}}&user_image={{item.user_image}}&id={{item.user_id}}&created_at={{item.created_at}}&created_by={{item.created_by}}&content_num={{item.content_num}}&content={{item.content}}&img_height={{item.img_height}}&img_width={{item.img_width}}&Collection_quantity={{item.Collection_quantity}}&is_share=false&longitude={{item.longitude}}&latitude={{item.latitude}}" >
+                              <image binderror="error" bindtap='pp' class='image_box' data-imageUrl="{{item.url}}"  lazy-load="{{true}}"  data-category='{{item.category}}'  data-user_name='{{item.user_name}}' data-user_image='{{item.user_image}}' data-id='{{item.user_id}}' src="{{item.url}}" style="width:100%;height:{{item.height}}px" binderror="error">
+                              <view class="margin_bottom">
+                                <view class='user_box'>
+                                  <view class='user_box_img'><image src="{{item.user_image}}" class="user_box_img_wh"></image></view>
+                                  <view class='user_box_name'>{{item.user_name}}</view>
+                                </view>
+                                <view >{{item.content}}</view>
+                              </view>
+                              <view class='imgmap' wx:if="{{item.imgshow}}">
+                                <image  class="gotu" src="../../images/icon/map1.png"></image>
+                              </view>
+
+                            </image>
+                              
+                          </navigator> 
+                      </view>   
+                      <view wx:if="{{two}}" class='next_word' bindtap='next'>{{next_word}}</view>    
+                  </view>
+        
+              </view>
+             </view>
+            </scroll-view>
+         
+          </swiper-item>
+          <swiper-item style="height:calc(100vh - {{zghCustomBar}}px);width:100vw;"  > 
+                <scroll-view scroll-y style="height:calc(100vh - {{zghCustomBar}}px);" wx:key="{{item.index}}"  scroll-top="{{scroll_top}}" bindscrolltolower="S_image_lower" >
+             <view class='box'>
+              <view class='upload' bindtap='upload_image'  ><image src='../../images/icon/upload.png' class='upload_image'></image></view>
+              <view >
+                <view wx:for="{{S_images}}" wx:key="index">
+               
+                  <image   id="{{index}}" src="{{item.pic}}"  data-item="{{index}}" bindload="S_loadimg"  binderror="error" data-err-img="images[{{index}}].pic" ></image>
+                </view>
+              </view>
+              <view style="width:100%;height:auto">
+                  <view class="img_item_left img_item">
+                      <view wx:for="{{S_oneimages}}" wx:key="index" >
+                        <navigator url="../Picture_details/Picture_details?imageUrl={{item.url}}&category={{item.category}}&user_name={{item.user_name}}&user_image={{item.user_image}}&id={{item.user_id}}&created_at={{item.created_at}}&created_by={{item.created_by}}&content_num={{item.content_num}}&content={{item.content}}&img_height={{item.img_height}}&img_width={{item.img_width}}&Collection_quantity={{item.Collection_quantity}}&is_share=false&&longitude={{item.longitude}}&latitude={{item.latitude}}" >
+                             <image binderror="error" bindtap='pp' class='image_box' lazy-load="{{true}}" src="{{item.url}}" data-item="1" style="width:100%;height:{{item.height}}px">
+                              <view class="margin_bottom">
+                                <view class='user_box'>
+                                  <view class='user_box_img'><image src="{{item.user_image}}" class="user_box_img_wh"></image></view>
+                                  <view class='user_box_name'>{{item.user_name}}</view>
+                                </view>
+                                <view >{{item.content}}</view>
+                              </view>
+                              
+                             </image>
+                        </navigator>
+                      </view>
+                      <view wx:if="{{S_one}}" class='next_word' bindtap='S_next'>{{S_next_word}}</view>
+                  </view>
+                  <view class="img_item_right img_item">
+                      <view wx:for="{{S_twoimages}}" wx:key="index">
+                          <navigator url="../Picture_details/Picture_details?imageUrl={{item.url}}&category={{item.category}}&user_name={{item.user_name}}&user_image={{item.user_image}}&id={{item.user_id}}&created_at={{item.created_at}}&created_by={{item.created_by}}&content_num={{item.content_num}}&content={{item.content}}&img_height={{item.img_height}}&img_width={{item.img_width}}&Collection_quantity={{item.Collection_quantity}}&is_share=false&longitude={{item.longitude}}&latitude={{item.latitude}}" >
+                              <image binderror="error" bindtap='S_pp' class='image_box' data-imageUrl="{{item.url}}"  lazy-load="{{true}}"  data-category='{{item.category}}'  data-user_name='{{item.user_name}}' data-user_image='{{item.user_image}}' data-id='{{item.user_id}}' src="{{item.url}}" style="width:100%;height:{{item.height}}px" binderror="error">
+                              <view class="margin_bottom">
+                                <view class='user_box'>
+                                  <view class='user_box_img'><image src="{{item.user_image}}" class="user_box_img_wh"></image></view>
+                                  <view class='user_box_name'>{{item.user_name}}</view>
+                                </view>
+                                <view >{{item.content}}</view>
+                              </view>
+                            </image>
+                              
+                          </navigator> 
+                      </view>   
+                      <view wx:if="{{S_two}}" class='next_word' bindtap='S_next'>{{S_next_word}}</view>    
+                  </view>
+        
+              </view>
+             </view>
+            </scroll-view>    
+          </swiper-item>
+          <swiper-item style="height:100vh;width:100vw;" >
+
+             <import src="../../templates/user_card/user_card.wxml"/>
+           
+              <scroll-view   scroll-y  scroll-with-animation="{{true}}"  bindscrolltolower="user_lower"  style="height:calc(100vh - {{CustomBar+15}}px);"    >
+               <view class='bottom'>
+                <template is="Picture_User_Ranking" data="{{userList}}"/>
+                <view class='user_list' bindtap="focus_user_list">--{{user_next}}--</view>
+               </view>
+              </scroll-view>
+          </swiper-item>
+        </swiper>
+      </view>      
+    </view>
+  </view>
+</view>

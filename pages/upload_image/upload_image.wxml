@@ -1,0 +1,12 @@
+<!--pages/upload_image/upload_image.wxml-->
+<cuzc-custom bgImage="https://cloud-minapp-13676.cloud.ifanrusercontent.com/1fuEBvRsKrFDKMCk.jpg" isBack="{{true}}"></cuzc-custom>
+<view class='logo_box'><image class='logo' src='../../images/qmt.jpg'></image></view>
+<view class='content'>
+  <view class='content_text'>我们致力于打造高质量图片墙</view>
+  <view class='content_text'>所有的投稿我们都会认真审核</view>
+  <view class='content_text'>精美图片将会被收录在图片墙中</view>
+  <view class='content_text'>由于审核人手有限</view>
+   <view class='content_text'>每日开放<view class='number'>100</view>个名额，每人每天最多发10张图片</view>
+  <view class='content_text'>今天投稿人数：<view class='number'>{{number}}</view></view>
+</view>
+<form class='upload' bindsubmit="prompt" report-submit><button  form-type='submit' class='upload_image' bindtap= "{{!buttonClicked? 'identity':''}}"  >投稿</button></form>

@@ -1,0 +1,96 @@
+<!--pages/try/try.wxml-->
+
+
+
+<!-- <view wx:for="{{list}}" wx:key="*this">
+
+<view> <checkbox value="{{item}}"/>{{item.value}}{{item}}</view>
+</view>
+
+<view>{{timestamp}}</view>
+ <!-- <wxs src="./try.wxs" module='n'/> -->
+ 
+<!-- <wxs src='./try.wxs' module='m1' /> --> 
+<!-- <view> -->
+  <!-- <view><text>当前日期：\n{{m1.myDate}}</text></view> -->
+  <!-- <view><text>本周日期：\n{{m1.weeklist}}</text></view> -->
+<!-- </view> -->
+
+
+<!-- <view>{{n.time(timestamp)}}</view> -->
+<!-- <wxs module="util">
+var time= function (e) {
+return 'jkjkjkjk'
+}
+module.exports = {
+ time:time
+}
+</wxs> -->
+<!-- 
+<view>
+{{util.time(aa)}}
+</view> -->
+
+<!-- <wxs  module='format'>
+var format=require("./format.wxx")
+ 
+</wxs>  -->
+<!-- 
+<view style='width:600rpx;height:600rpx;background:red;margin:100rpx auto;' data-click="{{'外'}}"  capture-bind:tap="cc"  >
+  <view style='width:500rpx;height:500rpx;background:blue;margin:100rpx'   capture-bind:tap="bb"  data-click="{{'中'}}" >
+    <view style='width:400rpx;height:400rpx;background:pink;margin:100rpx'   capture-bind:tap="aa"  data-click="{{'内'}}" >最内层</view>
+    中间层
+  </view>
+  最外层
+</view> -->
+
+
+
+
+<view bindtap='delete'>kjkjkkjkjkj</view>
+
+
+
+<!-- <view bindtap='cc'>dfjkdfjdskjsdjsdkjsdkgjsg</view> -->
+
+
+
+
+<view bindtap='water'>水电查询</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<button bindtap='aa'>提交图片</button>
+
+<button bindtap='bb'>查看图片</button>
+ <scroll-view scroll-y   scroll-with-animation="{{true}}"  bindscrolltolower="lower"  style="height:85vh;width:99vw;border:0.1rpx solid red;"   >
+  <block wx:for="{{ImageArray }}"  >
+   <view style='height:200rpx;width:99vw;border:1rpx solid black;' >
+    <image src="{{item.ImageUrl}}" style='display:block;height:200rpx;width:200rpx;'  ></image>
+  </view> 
+ </block> 
+
+</scroll-view> 
+<button bindtap='cc'> 登录</button> -->

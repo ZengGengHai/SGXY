@@ -1,0 +1,335 @@
+
+.user_box{       /*用户留言样式*/
+ padding:10rpx;
+ display: flex;
+ flex-direction: row;
+}
+.img image{
+ width:50rpx;
+ height: 50rpx;
+ border-radius: 50%;
+ margin-top:25rpx;
+ box-shadow: 1rpx 1rpx 5rpx #505050;
+
+}
+.user_info_box{
+ width: 100%;
+ padding:20rpx;
+ /* border: 1px solid red; */
+
+}
+.info_box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 45rpx;
+
+}
+.user_info ,.info_name{
+  font-size: 22rpx;
+  padding-bottom: 8rpx;
+  /* font-weight: bold;  */
+  line-height: 40rpx;
+  color:rgb(175, 175, 175);
+}
+.user_info ,.info_word{
+  font-size: 22rpx;
+  line-height: 40rpx;
+  padding-bottom: 3rpx;
+  padding-top:10rpx;
+  color:black;
+
+}
+
+.time_delete_box{
+  /* border:1px solid red; */
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.info_time{
+  width:200rpx;
+  font-size: 22rpx;
+  padding-top:5rpx;
+  color:rgb(175, 175, 175);
+ 
+  
+}
+.delete_box{
+  display: flex;
+  flex-direction: row; 
+  padding-top:3rpx;
+  /* justify-content: flex-end; */
+  
+
+}
+.shoucang{
+  width:28rpx;
+  height:28rpx;
+  padding:2rpx;
+  margin:5rpx  15rpx 5rpx 0rpx;
+  background: #00c569;
+  border:3rpx solid #000;
+  border-radius:50%;
+}
+.delete{
+  width:49rpx;
+  height:40rpx;
+  padding:3rpx 17rpx 5rpx 0rpx;
+
+
+}
+.huifu{
+  width: 50rpx;
+  height: 40rpx;
+  padding:5rpx  15rpx 5rpx 0rpx;
+  
+}
+
+.put{
+  width:100vw;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* border:1px solid red; */
+  background:#fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding:1vh 0 1vh 0;
+  z-index: 25;
+  overflow:hidden;
+ 
+ 
+ 
+}
+.input_word{
+  width:75vw;
+  height:7vh;
+  background: #fff;
+  border-radius: 10rpx;
+  font-size: 23rpx;
+  line-height: 30rpx;
+  padding:2vw;
+}
+.input_button{
+ width:17vw;
+ height:4vh;
+ background: green;
+ color:#fff;
+ font-size: 25rpx;
+ text-align: center;
+ line-height:4vh;
+ margin-top:6rpx;
+ margin-right:2vw;
+ z-index: 99999;
+
+}
+
+.loding{
+  width:50vw;
+  margin:170rpx auto 360rpx;
+  height: 40rpx;
+  /* border: 1px solid red; */
+  line-height: 40rpx;
+  text-align: center;
+  /* box-shadow: 1rpx 1rpx 20rpx #ee4a4a; */
+  border-radius: 10rpx;
+  font-size: 26rpx;
+}
+
+
+
+
+.replay_num{
+  display:inline-block;
+  color: #16a361;
+  font-size:28rpx;
+  line-height: 40rpx;
+  
+}
+
+/* 
+.replay{
+  width:85vw;
+  background: #eee;
+  margin-top:15rpx;
+
+  padding-top:15rpx;
+  border-radius: 10rpx;
+  padding-bottom: 10rpx;
+ 
+}
+.Replay_user_box{
+  display: flex;
+  flex-direction: row;
+  padding:10rpx; 
+
+}
+.Replay_img{
+ width:45rpx;
+ height: 45rpx;
+ border-radius:50%;
+ padding:5rpx ;
+ margin-top:18rpx;
+}
+
+.Replay_info_name,.Replay_info_word,.second,.Replay_info_time{
+  display: inline-block;
+  font-size: 24rpx;
+  padding-bottom: 8rpx;
+  line-height: 24rpx;
+}
+.Replay_user_info{
+  display: inline-block;
+  font-size: 24rpx;
+  height:50rpx;
+  line-height: 90rpx;
+}
+.Replay_time_delete_box{
+  display: inline-block;
+  padding-bottom:0rpx;
+}
+.Replay_info_name{
+  font-size: 22rpx;
+  color:rgb(177, 172, 172);
+  padding-right: 10rpx;
+}
+.Replay_info_name_right{
+  padding-right: 2rpx;
+}
+.second{
+  font-size: 22rpx;
+  color:rgb(177, 172, 172);
+  padding-right: 15rpx;
+  padding-left:5rpx;
+}
+
+
+.Replay_info_word{
+   line-height: 35rpx;
+   font-size: 22rpx;
+   color:black;
+}
+
+.Replay_info_time{
+  color:rgb(177, 172, 172);
+  font-size: 20rpx;
+  padding-left:15rpx;
+}
+
+.Replay_delete{
+  display: felx;
+  flex-direction: column;
+  justify-content: center;
+  width: 35rpx;
+  height: 35rpx;
+  position:relative;
+  top:10rpx;
+}
+.replay_next{
+  position: relative;
+  top:-25rpx;
+  width:175rpx;
+  font-size: 20rpx;
+  text-align: center;
+  padding:4rpx 12rpx;
+
+  margin:30rpx auto 5rpx;
+  border-radius: 4rpx;
+  color:#fff;
+}
+
+
+ */
+
+ 
+.replay{
+  width:85vw;
+  background: #eee;
+  margin-top:15rpx;
+  /* padding-bottom: 10rpx; */
+  padding-top:25rpx;
+  border-radius: 10rpx;
+}
+.Replay_user_box{
+  display: flex;
+  flex-direction: row;
+  padding:10rpx; 
+
+}
+.Replay_img{
+  width:40rpx;
+  height: 40rpx;
+  border-radius:10rpx;
+  padding: 5rpx ;
+  margin-top:5rpx;
+  margin-right: 5rpx;
+}
+
+.Replay_info_name,.Replay_info_word,.second,.Replay_user_info,.Replay_info_time,.Replay_time_delete_box{
+  display: inline-block;
+  font-size: 24rpx;
+  padding-bottom: 8rpx;
+  line-height: 50rpx;
+}
+.Replay_time_delete_box{
+  width:30rpx;
+  height:30rpx;
+}
+.Replay_info_name{
+  font-size: 22rpx;
+  color:rgb(177, 172, 172);
+  padding-right: 10rpx;
+}
+.Replay_info_name_right{
+  
+  padding-right: 2rpx;
+}
+.second{
+  font-size: 22rpx;
+  color:rgb(177, 172, 172);
+  padding-right: 15rpx;
+  padding-left:5rpx;
+}
+
+
+.Replay_info_word{
+   line-height: 35rpx;
+   font-size: 22rpx;
+   color:black;
+}
+
+.Replay_info_time{
+  color:rgb(177, 172, 172);
+  font-size: 20rpx;
+  padding-left:15rpx;
+
+}
+
+.Replay_delete{
+  width:33rpx;
+  height:30rpx;
+  padding:2rpx;
+  position:relative;
+  top:7rpx;
+  left:3rpx;
+
+}
+.replay_next{
+  position: relative;
+  top:-25rpx;
+  width:175rpx;
+  font-size: 20rpx;
+  text-align: center;
+  padding:4rpx 12rpx;
+  margin:25rpx auto 0rpx;
+  border-radius: 4rpx;
+  color:#fff;
+}
+
+

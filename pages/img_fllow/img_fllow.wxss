@@ -1,0 +1,6 @@
+/* pages/img_fllow/img_fllow.wxss */
+@import "../../templates/user_card/user_card.wxss";
+.bottom{
+  margin-top:10rpx;
+  
+}

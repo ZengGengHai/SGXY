@@ -1,0 +1,94 @@
+
+.business_card{
+  
+  position: relative;
+  top:-10rpx;
+  width:100vw;
+  /* border:1px solid red; */
+  display: flex;
+  flex-direction: row;
+  margin-top:0;
+  justify-content:space-between;
+
+}
+.business_card1{
+
+  width:100vw;
+  /* border:1px solid red; */
+  display: flex;
+  flex-direction: row;
+  margin-top:15rpx;
+  margin-bottom: 10rpx;
+  justify-content:space-between;
+  background: #fff;
+  
+}
+
+.user_info_img{
+  width:18vw;
+  
+   /* border:1px solid red; */
+}
+.user_image1{   
+  display: block;
+  width:80rpx;
+  height:80rpx;
+  margin:30rpx auto 20rpx;
+  border-radius:50%;
+  border:1rpx solid #000;
+}
+
+/* 高度120rpx */
+
+.user_info{
+  width:73vw;
+  padding:18rpx;
+  /* border:1px solid red; */
+}
+.user_info_name{
+  font-size: 26rpx;
+  padding:15rpx 0 10rpx;
+  color: black;
+  /* background: yellow; */
+  font-weight: bold;
+}
+
+.user_info_name_box{
+  width:65vw;
+  font-size: 26rpx;
+  padding:15rpx 0 10rpx;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  /* background: yellow; */
+  font-weight: bold;
+  justify-content: space-between;
+
+}
+
+.num{
+  margin-left:40rpx;
+  font-size: 22rpx;
+  color:#707070;
+  margin-top:5rpx;
+
+}
+
+
+
+
+.user_info_time{
+  font-size: 26rpx;
+  padding:0 0 5rpx;
+  color:rgb(160, 158, 158);
+
+}
+.person{
+  width:10vw;
+  order:1px solid red;
+}
+.right_img{
+  width:40rpx;
+  height: 40rpx;
+  margin:50rpx 0 50rpx;
+}

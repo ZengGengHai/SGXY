@@ -1,0 +1,96 @@
+
+
+
+<!-- 胶囊 -->
+<canui-head-box></canui-head-box>
+
+<!-- 流星雨 -->
+<view class="stars ">
+  <view class="star "></view>
+  <view class="star pink "></view>
+  <view class="star blue "></view>
+  <view class="star yellow "></view>
+</view>
+
+
+
+
+<scroll-view scroll-y class="scrollPage">
+  <view class="UCenter-bg">
+     <image class="userinfo-avatar" style='width:120rpx;height:120rpx;' src="{{userInfo.avatar}}" background-size="cover"  mode="aspectFill"></image> 
+            <text   wx:if="{{!box}}"  class="userinfo-nickname">{{userInfo.nickname}}</text>
+         <view style='position:relative;'>
+          <button open-type="getUserInfo" class='userinfo_box'   wx:if="{{box}}" bindgetuserinfo="userInfoHandler">点击授权登录</button>
+          <!-- <button open-type="getUserInfo" class='userinfo_box'   wx:if="{{userbox}}" bindgetuserinfo="userInfoHandler">点击授权登录</button> -->
+          <view hidden="{{!name_open}}" ><image class='click_name'  style="position:absolute;"  src='../../images/icon/dianji.png'></image></view>
+         </view>
+    <!-- <image src="https://image.weilanwl.com/gif/wave.gif" mode="scaleToFill" class="gif-wave"></image> -->
+  </view>
+   <view class="padding flex text-center text-grey bg-white shadow-warp">
+    <view class="flex flex-sub flex-direction solid-right"  bindtap="publish">
+      <view class="text-xl text-orange">{{publicnum}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-album"></text> 发布</view>
+    </view>
+    <view class="flex flex-sub flex-direction solid-right" bindtap='shoucang'>
+      <view class="text-xl text-blue">{{shoucangnum}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-favorfill"></text> 收藏</view>
+    </view>
+    <view class="flex flex-sub flex-direction"  bindtap='my_focus'>
+      <view class="text-xl text-green">{{focususernum}}</view>
+      <view class="margin-top-sm">
+        <text class="cuIcon-fork"></text>关注</view>
+    </view>
+  </view>
+  <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius" style='position:relative;'>
+    <!-- <view class="cu-item arrow">
+      <view class="content" bindtap="buyEquipment" data-link="https://github.com/weilanwl/ColorUI">
+        <text class="cuIcon-shop text-yellow"></text>
+        <text class="text-grey">购买记录</text>
+      </view>
+    </view> -->
+     <view ><image  hidden="{{!nvalidation_open}}" class='click_image'  src='../../images/icon/dianji.png'></image></view>
+    
+    
+    <view class="cu-item arrow" >
+      <button  class="cu-btn content" bindtap='system_validation'>
+        <text class="cuIcon-formfill text-green"></text>
+        <text class="text-grey">教务系统身份验证</text>  
+      </button>
+    </view>
+
+    <view class="cu-item arrow">
+      <button class="cu-btn content"  bindtap='my_release'>
+        <text class="cuIcon-writefill text-cyan"></text>
+        <text class="text-grey">我的管理</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="cu-btn content" open-type="contact"  session-from="weapp"  >
+        <text class="cuIcon-servicefill text-red"></text>
+        <text class="text-grey">联系客服</text>
+      </button>
+    </view>
+    <view class="cu-item arrow" >
+      <button class="cu-btn content" bindtap='usingDocument'>
+        <text class="cuIcon-calendar text-yellow"></text>
+        <text class="text-grey">使用手册</text>
+      </button>
+    </view>
+    <view class="cu-item arrow" >
+      <button class="cu-btn content" bindtap='About'>
+        <text class="cuIcon-sort text-purple"></text>
+        <text class="text-grey">开发记录</text>
+      </button>
+    </view>
+    <view class="cu-item arrow"  wx:if="{{imgAdmin}}">
+      <button class="cu-btn content" bindtap='Management_Backstage'>
+        <text class="cuIcon-radiobox text-pink"></text>
+        <text class="text-grey">管理中心</text>
+      </button>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view> 
+</scroll-view>
+

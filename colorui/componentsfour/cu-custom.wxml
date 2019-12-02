@@ -1,0 +1,12 @@
+
+<view class="cul-custom" style="height:{{CustomBar}}px">
+  <view class="cu-bar fixed {{bgImage!=''?'none-bg text-white bg-img':''}} {{bgColor}}" style="height:{{zghCustomBar}}px;padding-top:{{StatusBar}}px;{{bgImage?'background-image:url(' + bgImage+')':''}}">
+   
+  </view>
+  <view  class="cu-bar fixed  bg-img text-white"  style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;" >
+       <view class="canui-head-box" style="top:{{StatusBar}}px;z-index:500;">
+    <view class='cuIcon-back' bindtap='BackPage' open-type="navigateBack" hover-class="none" ></view>
+    <view class='cuIcon-home' bindtap='toHome' open-type="navigateBack" hover-class="none"></view>
+</view>
+  </view>
+</view>
