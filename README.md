@@ -6,7 +6,7 @@ typora-root-url: img
 
 
 
-![gh_bd7fdcf6dcf9_258](/gh_bd7fdcf6dcf9_258.jpg)
+![gh_bd7fdcf6dcf9_258](/img/gh_bd7fdcf6dcf9_258.jpg)
 
 
 
